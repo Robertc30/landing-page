@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Tools — TechQuest.AI</title>
+    <title>Reviews — TechQuest.AI</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
@@ -24,22 +24,12 @@
         .tool-name { font-weight: 600; color: #1e293b; font-size: 1.125rem; }
         .tool-tag { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
         .tag-review { background: #eff6ff; color: #1e40af; }
-        .tag-external { background: #f0fdf4; color: #166534; }
+        .tag-featured { background: #fef3c7; color: #92400e; }
         .tool-desc { font-size: 0.875rem; color: #64748b; margin-bottom: 12px; }
         .tool-link { font-size: 0.875rem; color: #2563eb; text-decoration: none; }
         .tool-link:hover { text-decoration: underline; }
         .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
         .back-link:hover { color: #2563eb; }
-        .featured-app { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; margin-bottom: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
-        .featured-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .featured-name { font-weight: 700; font-size: 1.375rem; color: #1e293b; }
-        .featured-tag { background: #2563eb; color: #fff; font-size: 0.65rem; font-weight: 600; padding: 4px 10px; border-radius: 10px; letter-spacing: 0.5px; }
-        .featured-desc { font-size: 1.0625rem; color: #475569; margin-bottom: 8px; }
-        .featured-context { font-size: 0.875rem; color: #94a3b8; font-style: italic; margin-bottom: 16px; }
-        .featured-link { font-size: 0.9375rem; color: #2563eb; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
-        .featured-link:hover { text-decoration: underline; }
-        .featured-link::after { content: "→"; }
-        .featured-thumb { display: block; width: 100%; max-width: 200px; height: 120px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 3rem; }
         footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
         .footer-note { font-size: 0.875rem; color: #94a3b8; }
     </style>
@@ -49,25 +39,26 @@
         <nav class="nav">
             <a href="index.html">Home</a>
             <a href="blog/index.html">Blog</a>
-            <a href="reviews/index.html">Reviews</a>
-            <a href="#tools" class="active">Tools</a>
+            <a href="#" class="active">Reviews</a>
+            <a href="tools.html">Tools</a>
         </nav>
         
         <header>
-            <h1>All Tools</h1>
-            <p class="subtitle">The complete stack powering TechQuest.AI</p>
+            <h1>Tool Reviews</h1>
+            <p class="subtitle">In-depth analysis of the tools we rely on</p>
         </header>
 
         <section class="section">
-            <div class="featured-app">
-                <div class="featured-thumb">📦</div>
-                <div class="featured-header">
-                    <span class="featured-name">ItemFits — Will it fit? Find out before checkout.</span>
-                    <span class="featured-tag">FEATURED</span>
+            <h2>Featured</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">ItemFits</span>
+                        <span class="tool-tag tag-featured">FEATURED</span>
+                    </div>
+                    <p class="tool-desc">Will it fit? Find out before checkout. The furniture planning tool built from a real moving fail.</p>
+                    <a href="reviews/itemfits.html" class="tool-link">Read Review →</a>
                 </div>
-                <p class="featured-desc">The app that tells you if your furniture will fit before you buy. Free calculator for measuring spaces and comparing against product dimensions.</p>
-                <p class="featured-context">Featured because we actually use it.</p>
-                <a href="reviews/itemfits.html" class="featured-link">Read the story</a>
             </div>
         </section>
 
@@ -106,14 +97,6 @@
                     <p class="tool-desc">Speech recognition — turns audio into text reliably</p>
                     <a href="reviews/openai-whisper.html" class="tool-link">Read Review →</a>
                 </div>
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">GitHub Pages</span>
-                        <span class="tool-tag tag-external">EXTERNAL</span>
-                    </div>
-                    <p class="tool-desc">Free hosting for this blog</p>
-                    <a href="https://pages.github.com" class="tool-link" target="_blank" rel="noopener">Visit Site →</a>
-                </div>
             </div>
         </section>
 
@@ -126,7 +109,7 @@
                         <span class="tool-tag tag-review">USING DAILY</span>
                     </div>
                     <p class="tool-desc">Free GPU-powered notebooks for experiments</p>
-                    <a href="https://colab.research.google.com" class="tool-link" target="_blank" rel="noopener">Sign Up / Sign In →</a>
+                    <a href="reviews/google-colab.html" class="tool-link">Read Review →</a>
                 </div>
                 <div class="tool-card">
                     <div class="tool-header">
@@ -134,7 +117,7 @@
                         <span class="tool-tag tag-review">USING DAILY</span>
                     </div>
                     <p class="tool-desc">AI-powered research assistant — turns your docs into conversations</p>
-                    <a href="https://notebooklm.google.com" class="tool-link" target="_blank" rel="noopener">Sign Up / Sign In →</a>
+                    <a href="reviews/notebooklm.html" class="tool-link">Read Review →</a>
                 </div>
                 <div class="tool-card">
                     <div class="tool-header">
@@ -142,12 +125,12 @@
                         <span class="tool-tag tag-review">USING DAILY</span>
                     </div>
                     <p class="tool-desc">Google's multimodal AI model — free tier is surprisingly capable</p>
-                    <a href="https://gemini.google.com" class="tool-link" target="_blank" rel="noopener">Sign Up / Sign In →</a>
+                    <a href="reviews/gemini.html" class="tool-link">Read Review →</a>
                 </div>
             </div>
         </section>
 
-        <a href="index.html#tools" class="back-link">← Back to Home</a>
+        <a href="index.html" class="back-link">← Back to Home</a>
 
         <footer>
             <p class="footer-note">Iterating in public. No selling. Just observing.</p>
