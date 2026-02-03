@@ -30,13 +30,16 @@
         .tool-link:hover { text-decoration: underline; }
         .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
         .back-link:hover { color: #2563eb; }
-        .featured-app { background: #fff; border: 2px solid #2563eb; border-radius: 12px; padding: 24px; margin-bottom: 40px; }
-        .featured-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
-        .featured-name { font-weight: 700; font-size: 1.25rem; color: #1e293b; }
+        .featured-app { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 28px; margin-bottom: 50px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+        .featured-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+        .featured-name { font-weight: 700; font-size: 1.375rem; color: #1e293b; }
         .featured-tag { background: #2563eb; color: #fff; font-size: 0.65rem; font-weight: 600; padding: 4px 10px; border-radius: 10px; letter-spacing: 0.5px; }
-        .featured-desc { font-size: 1rem; color: #475569; margin-bottom: 12px; }
-        .featured-link { font-size: 0.875rem; color: #2563eb; text-decoration: none; font-weight: 500; }
+        .featured-desc { font-size: 1.0625rem; color: #475569; margin-bottom: 8px; }
+        .featured-context { font-size: 0.875rem; color: #94a3b8; font-style: italic; margin-bottom: 16px; }
+        .featured-link { font-size: 0.9375rem; color: #2563eb; text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; }
         .featured-link:hover { text-decoration: underline; }
+        .featured-link::after { content: "→"; }
+        .featured-thumb { display: block; width: 100%; max-width: 200px; height: 120px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 3rem; }
         footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
         .footer-note { font-size: 0.875rem; color: #94a3b8; }
     </style>
@@ -56,13 +59,15 @@
         </header>
 
         <section class="section">
-            <div class="featured-app" style="margin-bottom: 50px;">
+            <div class="featured-app">
+                <div class="featured-thumb">📦</div>
                 <div class="featured-header">
-                    <span class="featured-name">ItemFits</span>
+                    <span class="featured-name">ItemFits — Will it fit? Find out before checkout.</span>
                     <span class="featured-tag">FEATURED</span>
                 </div>
                 <p class="featured-desc">The app that tells you if your furniture will fit before you buy. Free calculator for measuring spaces and comparing against product dimensions.</p>
-                <a href="https://www.itemfits.com" class="featured-link" target="_blank" rel="noopener">Visit Site →</a>
+                <p class="featured-context">Featured because we actually use it.</p>
+                <a href="https://www.itemfits.com" class="featured-link" target="_blank" rel="noopener">Try the calculator</a>
             </div>
         </section>
 
