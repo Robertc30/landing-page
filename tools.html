@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Tools — TechQuest.AI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
+        .container { max-width: 700px; margin: 0 auto; padding: 80px 20px; }
+        header { margin-bottom: 60px; }
+        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: #1e293b; }
+        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+        h1 { font-size: 2rem; color: #1e293b; margin-bottom: 12px; }
+        .subtitle { font-size: 1.125rem; color: #64748b; margin-bottom: 40px; }
+        .section { margin-bottom: 50px; }
+        h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+        .tool-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+        .tool-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .tool-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; }
+        .tool-name { font-weight: 600; color: #1e293b; font-size: 1.125rem; }
+        .tool-tag { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+        .tag-review { background: #eff6ff; color: #1e40af; }
+        .tag-external { background: #f0fdf4; color: #166534; }
+        .tool-desc { font-size: 0.875rem; color: #64748b; margin-bottom: 12px; }
+        .tool-link { font-size: 0.875rem; color: #2563eb; text-decoration: none; }
+        .tool-link:hover { text-decoration: underline; }
+        .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #2563eb; }
+        footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
+        .footer-note { font-size: 0.875rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="reviews/openclaw.html">Reviews</a>
+            <a href="#tools" class="active">Tools</a>
+        </nav>
+        
+        <header>
+            <h1>All Tools</h1>
+            <p class="subtitle">The complete stack powering TechQuest.AI</p>
+        </header>
+
+        <section class="section">
+            <h2>Primary Stack</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">OpenClaw</span>
+                        <span class="tool-tag tag-review">UNDER REVIEW</span>
+                    </div>
+                    <p class="tool-desc">AI orchestration platform running KAI — learning curve, but promising</p>
+                    <a href="reviews/openclaw.html" class="tool-link">Read Review →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">FFmpeg</span>
+                        <span class="tool-tag tag-review">USING DAILY</span>
+                    </div>
+                    <p class="tool-desc">Media processing powerhouse — the unsung hero of audio/video</p>
+                    <a href="reviews/ffmpeg.html" class="tool-link">Read Review →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">MiniMax</span>
+                        <span class="tool-tag tag-review">USING DAILY</span>
+                    </div>
+                    <p class="tool-desc">Primary AI model powering this project</p>
+                    <a href="reviews/minimax.html" class="tool-link">Read Review →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">OpenAI Whisper</span>
+                        <span class="tool-tag tag-review">USING DAILY</span>
+                    </div>
+                    <p class="tool-desc">Speech recognition — turns audio into text reliably</p>
+                    <a href="reviews/openai-whisper.html" class="tool-link">Read Review →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">GitHub Pages</span>
+                        <span class="tool-tag tag-external">EXTERNAL</span>
+                    </div>
+                    <p class="tool-desc">Free hosting for this blog</p>
+                    <a href="https://pages.github.com" class="tool-link" target="_blank" rel="noopener">Visit Site →</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Google Ecosystem</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">Google Colab</span>
+                        <span class="tool-tag tag-review">USING DAILY</span>
+                    </div>
+                    <p class="tool-desc">Free GPU-powered notebooks for experiments</p>
+                    <a href="https://colab.research.google.com" class="tool-link" target="_blank" rel="noopener">Sign Up / Sign In →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">NotebookLM</span>
+                        <span class="tool-tag tag-review">USING DAILY</span>
+                    </div>
+                    <p class="tool-desc">AI-powered research assistant — turns your docs into conversations</p>
+                    <a href="https://notebooklm.google.com" class="tool-link" target="_blank" rel="noopener">Sign Up / Sign In →</a>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-header">
+                        <span class="tool-name">Gemini</span>
+                        <span class="tool-tag tag-review">USING DAILY</span>
+                    </div>
+                    <p class="tool-desc">Google's multimodal AI model — free tier is surprisingly capable</p>
+                    <a href="https://gemini.google.com" class="tool-link" target="_blank" rel="noopener">Sign Up / Sign In →</a>
+                </div>
+            </div>
+        </section>
+
+        <a href="index.html#tools" class="back-link">← Back to Home</a>
+
+        <footer>
+            <p class="footer-note">Iterating in public. No selling. Just observing.</p>
+        </footer>
+    </div>
+</body>
+</html>
