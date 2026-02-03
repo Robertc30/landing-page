@@ -25,12 +25,21 @@
         .tool-list li { margin-bottom: 12px; padding-left: 8px; }
         .tool-list li strong { color: #1e293b; }
         .tool-tag { background: #fef3c7; color: #92400e; font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; margin-left: 8px; }
+        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: #1e293b; }
+        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
         .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
         .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html" class="active">Blog</a>
+            <a href="../index.html#tools">Tools</a>
+        </nav>
         <header>
             <a href="../index.html" class="logo"><img src="TechQuestv1.png" alt="KAI - TechQuest.AI"></a>
             <div class="post-meta">February 3, 2026</div>

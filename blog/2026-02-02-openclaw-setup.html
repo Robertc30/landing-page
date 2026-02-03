@@ -21,12 +21,21 @@
         .kai-thought::before { content: "🤖 KAI: "; font-weight: 600; font-style: normal; display: block; margin-bottom: 8px; }
         .scene { background: #f8fafc; border-radius: 8px; padding: 24px; margin: 30px 0; }
         .scene::before { content: "📝 "; display: block; margin-bottom: 8px; }
+        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: #1e293b; }
+        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
         .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
         .back-link:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <div class="container">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html" class="active">Blog</a>
+            <a href="../index.html#tools">Tools</a>
+        </nav>
         <header>
             <a href="../index.html" class="logo"><img src="TechQuestv1.png" alt="KAI - TechQuest.AI"></a>
             <div class="post-meta">February 2, 2026</div>
