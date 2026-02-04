@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw + Anti-Gravity Walkthrough - TechQuest.AI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #fff; }
+        .container { max-width: 800px; margin: 0 auto; padding: 60px 20px; }
+        header { margin-bottom: 40px; text-align: center; }
+        .logo { display: inline-block; margin-bottom: 30px; }
+        .logo img { height: 50px; }
+        .post-meta { color: #2563eb; font-size: 0.875rem; font-weight: 600; margin-bottom: 8px; }
+        h1 { font-size: 2.25rem; color: #1e293b; margin-bottom: 8px; line-height: 1.3; }
+        .subtitle { color: #64748b; font-size: 1.125rem; margin-bottom: 40px; }
+        .content { font-size: 1rem; }
+        .content p { margin-bottom: 20px; }
+        h2 { font-size: 1.5rem; color: #1e293b; margin: 40px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+        h3 { font-size: 1.25rem; color: #334155; margin: 28px 0 12px; }
+        .checklist { background: #f8fafc; border-radius: 8px; padding: 24px; margin: 24px 0; }
+        .checklist li { margin-bottom: 12px; padding-left: 8px; }
+        .checklist li input { margin-right: 10px; }
+        .warning { background: #fef2f2; border-left: 4px solid #ef4444; padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .warning::before { content: "⚠️ "; font-weight: bold; display: block; margin-bottom: 8px; }
+        .outcome { background: #f0fdf4; border-left: 4px solid #22c55e; padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .outcome::before { content: "✅ "; font-weight: bold; display: block; margin-bottom: 8px; }
+        .step { background: #f8fafc; border-radius: 8px; padding: 24px; margin: 24px 0; border-left: 4px solid #2563eb; }
+        .step-number { color: #2563eb; font-weight: 700; text-transform: uppercase; font-size: 0.75rem; letter-spacing: 1px; margin-bottom: 8px; display: block; }
+        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: #1e293b; }
+        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+        .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { text-decoration: underline; }
+        .toc { background: #f8fafc; border-radius: 8px; padding: 24px; margin: 30px 0; }
+        .toc h3 { margin-top: 0; margin-bottom: 16px; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { color: #2563eb; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-family: 'SF Mono', Monaco, monospace; font-size: 0.875em; }
+        pre { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; }
+        pre code { background: none; padding: 0; color: inherit; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html" class="active">Blog</a>
+            <a href="../reviews/index.html">Reviews</a>
+            <a href="walkthroughs.html">Walkthroughs</a>
+        </nav>
+        
+        <header>
+            <a href="../index.html" class="logo"><img src="TechQuestv1.png" alt="TechQuest.AI"></a>
+            <div class="post-meta">February 4, 2026</div>
+            <h1>OpenClaw + Anti-Gravity Full Step-by-Step Walkthrough</h1>
+            <p class="subtitle">Free Gemini / Opus Models — Build autonomous apps with local AI orchestration</p>
+        </header>
+
+        <div class="content">
+            <div class="outcome">
+                <strong>What You're Building (Big Picture)</strong><br>
+                OpenClaw = local autonomous AI orchestrator<br>
+                Anti-Gravity = execution engine + free access to powerful Google models<br>
+                Together → OpenClaw plans & routes tasks, Anti-Gravity executes them fast<br>
+                Think: Command center + specialist agents
+            </div>
+
+            <h2>What You'll Get at the End</h2>
+            <ul class="checklist">
+                <li>✅ OpenClaw running locally</li>
+                <li>✅ Free access to Gemini / Opus-level models via Google OAuth</li>
+                <li>✅ Anti-Gravity agents (builder, reviewer, debugger, UX, etc.)</li>
+                <li>✅ Dashboard + CLI + optional WhatsApp / Telegram control</li>
+                <li>✅ Ability to generate, refine, and deploy apps autonomously</li>
+            </ul>
+
+            <h2>Table of Contents</h2>
+            <div class="toc">
+                <ol>
+                    <li><a href="#prereqs">Prerequisites</a></li>
+                    <li><a href="#install-openclaw">Install OpenClaw Globally</a></li>
+                    <li><a href="#security">Read the Security Warning</a></li>
+                    <li><a href="#oauth">Enable Anti-Gravity OAuth</a></li>
+                    <li><a href="#login">Log In With Google</a></li>
+                    <li><a href="#onboard">Run OpenClaw Onboarding</a></li>
+                    <li><a href="#dashboard">Open the Dashboard</a></li>
+                    <li><a href="#skills">Enable Core Skills</a></li>
+                    <li><a href="#kit">Install Anti-Gravity Agent Kit</a></li>
+                    <li><a href="#community">Install Community Skills</a></li>
+                    <li><a href="#verify">Verify the Active Model</a></li>
+                    <li><a href="#usage">Using OpenClaw (3 Ways)</a></li>
+                    <li><a href="#example">Real Workflow Example</a></li>
+                    <li><a href="#tl-dr">TL;DR Setup Checklist</a></li>
+                </ol>
+            </div>
+
+            <h2 id="prereqs">1. Prerequisites (Do These First)</h2>
+            <ul>
+                <li><strong>Node.js 22+</strong></li>
+                <li><strong>npm</strong> (comes with Node)</li>
+                <li><strong>Google account</strong> (free)</li>
+                <li><strong>Mac / Windows / Linux</strong></li>
+            </ul>
+
+            <h3>Install Anti-Gravity</h3>
+            <p>Download and install Anti-Gravity for your OS from their official site. This is Google's agentic IDE used as your execution layer.</p>
+
+            <h2 id="install-openclaw">2. Install OpenClaw Globally</h2>
+            <p>Open a terminal / command prompt:</p>
+            <pre><code>npm install -g openclaw</code></pre>
+            <p>This installs OpenClaw system-wide.</p>
+
+            <h2 id="security">3. Read the Security Warning (Important)</h2>
+            <div class="warning">
+                <strong>OpenClaw has full system access capabilities.</strong><br><br>
+                Best practice (recommended): Install inside a VM or sandbox, restrict filesystem permissions, review docs before production use.<br><br>
+                <em>The video author did not sandbox (and explicitly says not to copy that mistake).</em>
+            </div>
+
+            <h2 id="oauth">4. Enable Anti-Gravity OAuth in OpenClaw</h2>
+            <p>This is the key step that unlocks free powerful models.</p>
+
+            <div class="step">
+                <span class="step-number">Step 4.1</span>
+                <h3>Enable the Plugin</h3>
+                <p>From the OpenClaw docs (linked in the video description), copy the command to enable the Anti-Gravity plugin and Google OAuth support. Paste it into your terminal and run it.</p>
+            </div>
+
+            <h2 id="login">5. Log In With Your Google Account</h2>
+            <p>Run the login command provided in the docs:</p>
+            <pre><code>openclaw login</code></pre>
+            <p>Browser opens. Log into your Google account. OAuth credentials are stored locally.</p>
+            <div class="outcome">At this point, OpenClaw can use Google-backed models for free. This method is officially supported — Google has publicly acknowledged it.</div>
+
+            <h2 id="onboard">6. Run OpenClaw Onboarding</h2>
+            <p>Now initialize everything else:</p>
+            <pre><code>openclaw onboard</code></pre>
+
+            <h3>During onboarding:</h3>
+
+            <div class="step">
+                <span class="step-number">Step 6.1</span>
+                <h3>Acknowledge Security Warning</h3>
+                <p>Read it. Confirm you understand the risk.</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Step 6.2</span>
+                <h3>Choose Setup Type</h3>
+                <p>Select <strong>Quick Start</strong></p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Step 6.3</span>
+                <h3>OAuth Provider</h3>
+                <p>Keep existing Anti-Gravity OAuth (don't overwrite)</p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Step 6.4</span>
+                <h3>Model Provider</h3>
+                <p>Select <strong>Google Anti-Gravity</strong></p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Step 6.5</span>
+                <h3>Model Selection</h3>
+                <p>Pick one:</p>
+                <ul>
+                    <li>Opus 4.5 (thinking)</li>
+                    <li>Gemini variants</li>
+                    <li>Any available free model</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Step 6.6</span>
+                <h3>Messaging Gateway (Optional)</h3>
+                <p>Choose if you want OpenClaw accessible from:</p>
+                <ul>
+                    <li>WhatsApp</li>
+                    <li>Telegram</li>
+                    <li>Discord</li>
+                    <li>Slack</li>
+                </ul>
+                <p><em>You can skip this and add later.</em></p>
+            </div>
+
+            <div class="step">
+                <span class="step-number">Step 6.7</span>
+                <h3>Skills & Hooks</h3>
+                <p>Skip for now (you'll enable manually later)</p>
+            </div>
+
+            <h2 id="dashboard">7. Open the OpenClaw Dashboard</h2>
+            <p>After onboarding, the dashboard auto-launches. If it doesn't:</p>
+            <pre><code>openclaw dashboard</code></pre>
+            <p>This opens at: <code>http://localhost:<port></code></p>
+
+            <h2 id="skills">8. Enable Core Skills</h2>
+            <p>Inside the Dashboard, go to Skills tab. Recommended to enable:</p>
+            <ul>
+                <li>Coding agent (OpenClaw Codex)</li>
+                <li>Planning / orchestration tools</li>
+                <li>Execution routing</li>
+            </ul>
+            <p>This lets OpenClaw decide which agent does what.</p>
+
+            <h2 id="kit">9. Install the Anti-Gravity Agent Kit</h2>
+            <p>This adds specialist agents:</p>
+            <ul>
+                <li>UI / UX Designer</li>
+                <li>Builder</li>
+                <li>Reviewer</li>
+                <li>Debugger</li>
+            </ul>
+            <pre><code>npm install -g anti-gravity-kit</code></pre>
+            <p>Now OpenClaw can call these agents automatically.</p>
+
+            <h2 id="community">10. Install Community Skills via Claw Hub</h2>
+            <p>Claw Hub = open-source skill marketplace. Example installs use npx:</p>
+            <pre><code>npx clawhub install &lt;skill-name&gt;</code></pre>
+            <p>Useful skills:</p>
+            <ul>
+                <li>Anti-Gravity quota checker (see remaining free usage)</li>
+                <li>Image generation agents</li>
+                <li>Workflow automation helpers</li>
+            </ul>
+
+            <h2 id="verify">11. Verify the Active Model</h2>
+            <p>Ask OpenClaw:</p>
+            <blockquote>"What model are you using?"</blockquote>
+            <p>You should see something like:</p>
+            <pre><code>Opus 4.5 via Anti-Gravity OAuth
+Gemini variants</code></pre>
+            <p>This confirms everything is wired correctly.</p>
+
+            <h2 id="usage">12. Using OpenClaw (3 Ways)</h2>
+
+            <h3>Option 1: Dashboard (Visual Control)</h3>
+            <ul>
+                <li>Run agents</li>
+                <li>Trigger skills</li>
+                <li>Monitor sessions</li>
+                <li>Schedule cron jobs</li>
+            </ul>
+
+            <h3>Option 2: Terminal</h3>
+            <pre><code>openclaw
+# or
+openclaw chat</code></pre>
+
+            <h3>Option 3: Messaging Apps (if enabled)</h3>
+            <ul>
+                <li>WhatsApp</li>
+                <li>Telegram</li>
+                <li>Discord</li>
+            </ul>
+            <p><em>You can literally deploy apps from your phone.</em></p>
+
+            <h2 id="example">13. Real Workflow Example</h2>
+            <ol>
+                <li>Prompt OpenClaw: <blockquote>"Build me a CRM dashboard"</blockquote></li>
+                <li>OpenClaw: Plans task, routes execution to Anti-Gravity agents</li>
+                <li>Anti-Gravity:
+                    <ul>
+                        <li>UI agent designs interface</li>
+                        <li>Builder writes code</li>
+                        <li>Reviewer refines output</li>
+                    </ul>
+                </li>
+                <li>Result:
+                    <ul>
+                        <li>Fully generated frontend</li>
+                        <li>Iterated & refined</li>
+                        <li>Deployed locally</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>Second pass → cleaner UI, fewer errors.</p>
+
+            <h2>14. Why This Workflow Is Powerful</h2>
+            <ul>
+                <li><strong>OpenClaw</strong> = brain</li>
+                <li><strong>Anti-Gravity</strong> = hands</li>
+                <li><strong>Agents</strong> = specialists</li>
+                <li><strong>Gateways</strong> = remote control</li>
+            </ul>
+            <p>You now have:</p>
+            <ul>
+                <li>Autonomous coding</li>
+                <li>Agent-based refinement</li>
+                <li>Multi-channel DevOps</li>
+                <li>Free access to top-tier models</li>
+            </ul>
+
+            <h2>15. Final Notes & Warnings</h2>
+            <ul>
+                <li>Sandbox before production</li>
+                <li>Monitor permissions</li>
+                <li>Review cron jobs carefully</li>
+                <li>Don't expose sensitive data blindly</li>
+            </ul>
+
+            <h2 id="tl-dr">TL;DR Setup Checklist</h2>
+            <ul class="checklist">
+                <li><input type="checkbox"> Install Anti-Gravity</li>
+                <li><input type="checkbox"> Install OpenClaw</li>
+                <li><input type="checkbox"> Enable Anti-Gravity OAuth</li>
+                <li><input type="checkbox"> Login with Google</li>
+                <li><input type="checkbox"> Run <code>openclaw onboard</code></li>
+                <li><input type="checkbox"> Select Google Anti-Gravity model</li>
+                <li><input type="checkbox"> Install Anti-Gravity Kit</li>
+                <li><input type="checkbox"> Enable skills</li>
+                <li><input type="checkbox"> Build things autonomously 🚀</li>
+            </ul>
+        </div>
+
+        <a href="walkthroughs.html" class="back-link">← Back to Walkthroughs</a>
+    </div>
+</body>
+</html>

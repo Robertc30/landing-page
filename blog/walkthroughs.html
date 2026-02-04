@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walkthroughs — TechQuest.AI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
+        .container { max-width: 800px; margin: 0 auto; padding: 80px 20px; }
+        header { margin-bottom: 60px; }
+        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: #1e293b; }
+        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+        h1 { font-size: 2rem; color: #1e293b; margin-bottom: 12px; }
+        .subtitle { font-size: 1.125rem; color: #64748b; margin-bottom: 40px; }
+        .walkthrough-list { list-style: none; }
+        .walkthrough-item { background: #fff; border-radius: 12px; padding: 28px; margin-bottom: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.2s; }
+        .walkthrough-item:hover { transform: translateY(-2px); }
+        .walkthrough-date { color: #2563eb; font-size: 0.875rem; font-weight: 600; margin-bottom: 8px; }
+        .walkthrough-title { font-size: 1.375rem; color: #1e293b; margin-bottom: 12px; }
+        .walkthrough-title a { text-decoration: none; color: inherit; }
+        .walkthrough-title a:hover { color: #2563eb; }
+        .walkthrough-desc { color: #64748b; margin-bottom: 16px; }
+        .walkthrough-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+        .tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; }
+        .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
+        .back-link:hover { color: #2563eb; }
+        footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
+        .footer-note { font-size: 0.875rem; color: #94a3b8; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="reviews/index.html">Reviews</a>
+            <a href="#" class="active">Walkthroughs</a>
+        </nav>
+        
+        <header>
+            <h1>Walkthroughs</h1>
+            <p class="subtitle">Step-by-step guides for building and automating with AI</p>
+        </header>
+
+        <ul class="walkthrough-list">
+            <li class="walkthrough-item">
+                <div class="walkthrough-date">February 4, 2026</div>
+                <h2 class="walkthrough-title"><a href="openclaw-anti-gravity-walkthrough.html">OpenClaw + Anti-Gravity Full Step-by-Step Walkthrough</a></h2>
+                <p class="walkthrough-desc">Complete guide to setting up OpenClaw with Anti-Gravity for free access to Gemini and Opus-level models. Build autonomous apps with local AI orchestration.</p>
+                <div class="walkthrough-tags">
+                    <span class="tag">OpenClaw</span>
+                    <span class="tag">Anti-Gravity</span>
+                    <span class="tag">Google OAuth</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </li>
+        </ul>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+
+        <footer>
+            <p class="footer-note">Iterating in public. No selling. Just observing.</p>
+        </footer>
+    </div>
+</body>
+</html>
