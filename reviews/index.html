@@ -30,6 +30,15 @@
         .tool-link:hover { text-decoration: underline; }
         .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
         .back-link:hover { color: #2563eb; }
+        .preview-window { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .preview-header { background: #f1f5f9; padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e2e8f0; }
+        .preview-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .preview-dot:nth-child(1) { background: #ef4444; }
+        .preview-dot:nth-child(2) { background: #f59e0b; }
+        .preview-dot:nth-child(3) { background: #22c55e; }
+        .preview-url { margin-left: auto; background: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; color: #64748b; border: 1px solid #e2e8f0; }
+        .preview-content { height: 320px; }
+        .preview-content iframe { width: 100%; height: 100%; border: none; }
         footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
         .footer-note { font-size: 0.875rem; color: #94a3b8; }
     </style>
@@ -47,6 +56,24 @@
             <h1>Tool Reviews</h1>
             <p class="subtitle">In-depth analysis of the tools we rely on</p>
         </header>
+
+        <section class="section">
+            <h2>Featured App Preview</h2>
+            <div class="preview-window">
+                <div class="preview-header">
+                    <span class="preview-dot"></span>
+                    <span class="preview-dot"></span>
+                    <span class="preview-dot"></span>
+                    <span class="preview-url">itemfits.com</span>
+                </div>
+                <div class="preview-content">
+                    <iframe src="https://www.itemfits.com" title="ItemFits Preview" loading="lazy"></iframe>
+                </div>
+            </div>
+            <p style="margin-top: 16px; font-size: 0.875rem; color: #64748b; text-align: center;">
+                <a href="itemfits.html" class="tool-link">Read the full review →</a>
+            </p>
+        </section>
 
         <section class="section">
             <h2>Featured</h2>
