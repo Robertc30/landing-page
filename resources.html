@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommended Channels — TechQuest.AI</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
+        .container { max-width: 900px; margin: 0 auto; padding: 80px 20px; }
+        header { margin-bottom: 60px; }
+        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+        .nav a:hover, .nav a.active { color: #1e293b; }
+        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+        h1 { font-size: 2rem; color: #1e293b; margin-bottom: 12px; }
+        .subtitle { font-size: 1.125rem; color: #64748b; margin-bottom: 40px; }
+        .intro { font-size: 1.0625rem; color: #475569; max-width: 700px; margin-bottom: 50px; }
+        .intro em { color: #94a3b8; font-style: normal; }
+        h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
+        .channels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
+        .channel-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; transition: transform 0.2s, box-shadow 0.2s; }
+        .channel-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
+        .channel-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
+        .channel-avatar { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.25rem; flex-shrink: 0; }
+        .channel-meta { flex: 1; min-width: 0; }
+        .channel-name { font-weight: 600; font-size: 1.125rem; color: #1e293b; margin-bottom: 4px; }
+        .channel-desc { font-size: 0.9375rem; color: #64748b; line-height: 1.6; margin-bottom: 16px; }
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+        .tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; }
+        .channel-why { background: #f8fafc; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
+        .channel-why-title { font-size: 0.75rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+        .channel-why-text { font-size: 0.875rem; color: #64748b; font-style: italic; }
+        .cta-button { display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: background 0.2s; }
+        .cta-button:hover { background: #334155; }
+        .cta-button::after { content: "↗"; }
+        .videos-section { margin-top: 60px; }
+        .coming-soon { background: #f8fafc; border: 2px dashed #e2e8f0; border-radius: 12px; padding: 60px 40px; text-align: center; }
+        .coming-soon h3 { font-size: 1.25rem; color: #1e293b; margin-bottom: 12px; }
+        .coming-soon p { color: #64748b; margin-bottom: 20px; }
+        .disclaimer { margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #94a3b8; font-style: italic; }
+        .disclaimer em { font-style: normal; }
+        footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
+        .footer-note { font-size: 0.875rem; color: #94a3b8; }
+        @media (max-width: 600px) {
+            .channels-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="reviews/index.html">Reviews</a>
+            <a href="blog/walkthroughs.html">Walkthroughs</a>
+            <a href="#" class="active">Resources</a>
+        </nav>
+        
+        <header>
+            <h1>Recommended Channels</h1>
+            <p class="subtitle">Curated recommendations for builders, operators, and AI tinkerers</p>
+            <p class="intro">
+                A hand-picked list of YouTube channels that actually move the needle. 
+                No fluff, no hype — just creators I've learned from. <em>Updated as I discover new ones.</em>
+            </p>
+        </header>
+
+        <section>
+            <h2>Channels I Actually Watch</h2>
+            <div class="channels-grid">
+                <!-- Channel Card -->
+                <div class="channel-card">
+                    <div class="channel-header">
+                        <div class="channel-avatar">IW</div>
+                        <div class="channel-meta">
+                            <div class="channel-name">In The World of AI</div>
+                        </div>
+                    </div>
+                    <p class="channel-desc">
+                        A practical, no-fluff AI channel focused on real workflows, agent systems, and tools you can actually use. Strong emphasis on hands-on demos, emerging AI stacks, and connecting theory to execution.
+                    </p>
+                    <div class="tags">
+                        <span class="tag">AI Agents</span>
+                        <span class="tag">Automation</span>
+                        <span class="tag">Developer Tools</span>
+                        <span class="tag">Practical Demos</span>
+                    </div>
+                    <div class="channel-why">
+                        <div class="channel-why-title">Why I Follow It</div>
+                        <p class="channel-why-text">This channel consistently explores how AI tools work together — not just what's new. It's especially valuable for builders experimenting with agentic systems and AI-driven development.</p>
+                    </div>
+                    <a href="https://youtube.com/@intheworldofai" target="_blank" rel="noopener" class="cta-button">View Channel</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="videos-section">
+            <h2>Recommended Videos</h2>
+            <div class="coming-soon">
+                <h3>Coming Soon</h3>
+                <p>Deep-dive video recommendations with context on why each one matters.</p>
+                <p style="font-size: 0.875rem; color: #94a3b8;">This section will highlight specific high-impact videos that shaped my workflows.</p>
+            </div>
+        </section>
+
+        <div class="disclaimer">
+            <em>No sponsorships. No affiliate links. Just things I actually learn from.</em>
+        </div>
+
+        <footer>
+            <p class="footer-note">Iterating in public. No selling. Just observing.</p>
+        </footer>
+    </div>
+</body>
+</html>
