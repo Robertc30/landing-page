@@ -1,86 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ItemFits Review — TechQuest.AI</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #fff; }
-        .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; }
-        header { margin-bottom: 40px; text-align: center; }
-        .logo { display: inline-block; margin-bottom: 30px; }
-        .logo img { height: 50px; }
-        .status { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
-        .tagline { color: #64748b; font-size: 1.25rem; margin-bottom: 20px; }
-        .use-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
-        .use-tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 6px 12px; border-radius: 6px; }
-        .section { margin-bottom: 40px; }
-        h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 16px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
-        .content { font-size: 1rem; color: #475569; }
-        .content p { margin-bottom: 16px; }
-        .personal-story { background: #f8fafc; border-left: 4px solid #2563eb; padding: 24px 28px; margin: 30px 0; border-radius: 0 8px 8px 0; }
-        .personal-story p { color: #334155; font-size: 1.0625rem; line-height: 1.8; margin-bottom: 16px; }
-        .personal-story p:last-child { margin-bottom: 0; }
-        .personal-story em { color: #64748b; }
-        .verdict { background: #eff6ff; border-radius: 8px; padding: 24px; margin-top: 30px; }
-        .verdict h3 { color: #1e40af; margin-bottom: 12px; }
-        .official-link { display: inline-block; margin-top: 20px; background: #1e293b; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.2s; }
-        .official-link:hover { background: #334155; }
-        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
-        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
-        .nav a:hover, .nav a.active { color: #1e293b; }
-        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
-        .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
-        .back-link:hover { text-decoration: underline; }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="ItemFits helps you find the perfect product dimensions instantly. A of this practical shopping assistant tool.">
+ <title>ItemFits — TechQuest.AI</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #fff; }
+ .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; }
+ header { margin-bottom: 40px; text-align: center; }
+ .logo { display: inline-block; margin-bottom: 30px; }
+ .logo img { height: 50px; }
+ .status { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
+ .tagline { color: #64748b; font-size: 1.25rem; margin-bottom: 20px; }
+ .use-tags { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 30px; }
+ .use-tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 6px 12px; border-radius: 6px; }
+ .section { margin-bottom: 40px; }
+ h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 16px; border-bottom: 2px solid #f1f5f9; padding-bottom: 8px; }
+ .content { font-size: 1rem; color: #475569; }
+ .content p { margin-bottom: 16px; }
+ .personal-story { background: #f8fafc; border-left: 4px solid #2563eb; padding: 24px 28px; margin: 30px 0; border-radius: 0 8px 8px 0; }
+ .personal-story p { color: #334155; font-size: 1.0625rem; line-height: 1.8; margin-bottom: 16px; }
+ .personal-story p:last-child { margin-bottom: 0; }
+ .personal-story em { color: #64748b; }
+ .verdict { background: #eff6ff; border-radius: 8px; padding: 24px; margin-top: 30px; }
+ .verdict h3 { color: #1e40af; margin-bottom: 12px; }
+ .official-link { display: inline-block; margin-top: 20px; background: #1e293b; color: #fff; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 500; transition: background 0.2s; }
+ .official-link:hover { background: #334155; }
+ .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+ .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+ .nav a:hover, .nav a.active { color: #1e293b; }
+ .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+ .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
+ .back-link:hover { text-decoration: underline; }
+ </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav">
-            <a href="../index.html">Home</a>
-            <a href="../blog/index.html">Blog</a>
-            <a href="openclaw.html" class="active">Reviews</a>
-        </nav>
-        
-        <header>
-            <a href="../index.html" class="logo"><img src="TechQuestv1.png" alt="TechQuest.AI"></a>
-            <div class="status">FEATURED</div>
-            <h1>ItemFits</h1>
-            <p class="tagline">Will it fit? Find out before checkout.</p>
-            <div class="use-tags">
-                <span class="use-tag">Furniture Planning</span>
-                <span class="use-tag">Moving Prep</span>
-                <span class="use-tag">Measurement</span>
-            </div>
-        </header>
+ <div class="container">
+ <nav class="nav">
+ <a href="../index.html">Home</a>
+ <a href="../blog/index.html">Blog</a>
+ <a href="openclaw.html" class="active">Reviews</a>
+ </nav>
+ 
+ <header>
+ <a href="../index.html" class="logo"><img src="../blog/images/kewl-kai.jpg" alt="TechQuest.AI" title="KAI - TechQuest.AI" width="50" height="50"></a>
+ <div class="status">FEATURED</div>
+ <h1>ItemFits</h1>
+ <p class="tagline">Will it fit? Find out before checkout.</p>
+ <div class="use-tags">
+ <span class="use-tag">Furniture Planning</span>
+ <span class="use-tag">Moving Prep</span>
+ <span class="use-tag">Measurement</span>
+ </div>
+ </header>
 
-        <div class="section">
-            <h2>The Story Behind It</h2>
-            <div class="personal-story">
-                <p>I personally know the guy behind this product, and I was there when the idea for it clicked. He had just moved into a new place, and I was helping him bring a couch up the stairs. I said it would fit. He said it wouldn't.</p>
-                <p>After 30 minutes of struggling, we gave up. It <em>might</em> have worked (if I was a little taller and my arms weren't jelly after endless curls at the gym)… but we'll never know.</p>
-                <p>Most of us have been in some version of that situation. That moment is what led him to build ItemFits — an app that helps you answer those questions before you buy or move something. Will that couch fit? Will a king-size bed work in your room? What size truck do you actually need for a move?</p>
-                <p>This app is designed to take the guesswork out of all of it.</p>
-            </div>
-        </div>
+ <div class="section">
+ <h2>The Story Behind It</h2>
+ <div class="personal-story">
+ <p>I personally know the guy behind this product, and I was there when the idea for it clicked. He had just moved into a new place, and I was helping him bring a couch up the stairs. I said it would fit. He said it wouldn't.</p>
+ <p>After 30 minutes of struggling, we gave up. It <em>might</em> have worked (if I was a little taller and my arms weren't jelly after endless curls at the gym)… but we'll never know.</p>
+ <p>Most of us have been in some version of that situation. That moment is what led him to build ItemFits — an app that helps you answer those questions before you buy or move something. Will that couch fit? Will a king-size bed work in your room? What size truck do you actually need for a move?</p>
+ <p>This app is designed to take the guesswork out of all of it.</p>
+ </div>
+ </div>
 
-        <div class="section">
-            <h2>What It Does</h2>
-            <div class="content">
-                <p>The web experience itself is clean, simple, and thoughtfully designed. It's still a work in progress, but it already solves a very real, very common problem:</p>
-                <p>If you've ever wrestled furniture through a doorway or made a bad guess at IKEA, it's worth checking out. Enter your dimensions, enter the item dimensions, and get an answer instead of a gamble.</p>
-            </div>
-        </div>
+ <div class="section">
+ <h2>What It Does</h2>
+ <div class="content">
+ <p>The web experience itself is clean, simple, and thoughtfully designed. It's still a work in progress, but it already solves a very real, very common problem:</p>
+ <p>If you've ever wrestled furniture through a doorway or made a bad guess at IKEA, it's worth checking out. Enter your dimensions, enter the item dimensions, and get an answer instead of a gamble.</p>
+ </div>
+ </div>
 
-        <div class="verdict">
-            <h3>Verdict</h3>
-            <p>ItemFits attacks a universal pain point with simplicity. No accounts, no upsells, just a calculator that answers the question before you regret not asking it. The fact that it's built by someone who lived the problem shows in the thoughtful design choices.</p>
-            <p>Recommended if you've ever underestimated a doorway or overestimated a trunk.</p>
-            <a href="https://www.itemfits.com" class="official-link" target="_blank" rel="noopener">Try the calculator →</a>
-        </div>
+ <div class="verdict">
+ <h3>Verdict</h3>
+ <p>ItemFits attacks a universal pain point with simplicity. No accounts, no upsells, just a calculator that answers the question before you regret not asking it. The fact that it's built by someone who lived the problem shows in the thoughtful design choices.</p>
+ <p>Recommended if you've ever underestimated a doorway or overestimated a trunk.</p>
+ <a href="https://www.itemfits.com" class="official-link" target="_blank" rel="noopener">Try the calculator →</a>
+ </div>
 
-        <a href="../index.html#featured" class="back-link">← Back to Featured App</a>
-    </div>
+ <a href="../index.html#featured" class="back-link">← Back to Featured App</a>
+ </div>
 </body>
 </html>
+
+
+

@@ -1,167 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reviews — TechQuest.AI</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
-        .container { max-width: 700px; margin: 0 auto; padding: 80px 20px; }
-        header { margin-bottom: 60px; }
-        .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
-        .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
-        .nav a:hover, .nav a.active { color: #1e293b; }
-        .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
-        h1 { font-size: 2rem; color: #1e293b; margin-bottom: 12px; }
-        .subtitle { font-size: 1.125rem; color: #64748b; margin-bottom: 40px; }
-        .section { margin-bottom: 50px; }
-        h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
-        .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
-        .tool-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
-        .tool-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
-        .tool-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; }
-        .tool-name { font-weight: 600; color: #1e293b; font-size: 1.125rem; }
-        .tool-tag { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
-        .tag-review { background: #eff6ff; color: #1e40af; }
-        .tag-featured { background: #fef3c7; color: #92400e; }
-        .tool-desc { font-size: 0.875rem; color: #64748b; margin-bottom: 12px; }
-        .tool-link { font-size: 0.875rem; color: #2563eb; text-decoration: none; }
-        .tool-link:hover { text-decoration: underline; }
-        .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
-        .back-link:hover { color: #2563eb; }
-        .preview-window { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-        .preview-header { background: #f1f5f9; padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e2e8f0; }
-        .preview-dot { width: 12px; height: 12px; border-radius: 50%; }
-        .preview-dot:nth-child(1) { background: #ef4444; }
-        .preview-dot:nth-child(2) { background: #f59e0b; }
-        .preview-dot:nth-child(3) { background: #22c55e; }
-        .preview-url { margin-left: auto; background: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; color: #64748b; border: 1px solid #e2e8f0; }
-        .preview-content { height: 320px; }
-        .preview-content iframe { width: 100%; height: 100%; border: none; }
-        footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
-        .footer-note { font-size: 0.875rem; color: #94a3b8; }
-    </style>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Browse in-depth reviews of tools and technologies that power TechQuest.AI. From AI models to automation platforms.">
+ <title>Reviews — TechQuest.AI</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
+ .container { max-width: 700px; margin: 0 auto; padding: 80px 20px; }
+ header { margin-bottom: 60px; }
+ .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
+ .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+ .nav a:hover, .nav a.active { color: #1e293b; }
+ .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+ h1 { font-size: 2rem; color: #1e293b; margin-bottom: 12px; }
+ .subtitle { font-size: 1.125rem; color: #64748b; margin-bottom: 40px; }
+ .section { margin-bottom: 50px; }
+ h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 20px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+ .tools-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+ .tool-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; transition: transform 0.2s, box-shadow 0.2s; }
+ .tool-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+ .tool-header { display: flex; justify-content: space-between; align-items: start; margin-bottom: 8px; }
+ .tool-name { font-weight: 600; color: #1e293b; font-size: 1.125rem; }
+ .tool-tag { font-size: 0.65rem; font-weight: 600; padding: 2px 8px; border-radius: 10px; }
+ .tag- background: #eff6ff; color: #1e40af; }
+ .tag-featured { background: #fef3c7; color: #92400e; }
+ .tool-desc { font-size: 0.875rem; color: #64748b; margin-bottom: 12px; }
+ .tool-link { font-size: 0.875rem; color: #2563eb; text-decoration: none; }
+ .tool-link:hover { text-decoration: underline; }
+ .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
+ .back-link:hover { color: #2563eb; }
+ .p window { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+ .p header { background: #f1f5f9; padding: 12px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid #e2e8f0; }
+ .p dot { width: 12px; height: 12px; border-radius: 50%; }
+ .p dot:nth-child(1) { background: #ef4444; }
+ .p dot:nth-child(2) { background: #f59e0b; }
+ .p dot:nth-child(3) { background: #22c55e; }
+ .p url { margin-left: auto; background: #fff; padding: 4px 12px; border-radius: 4px; font-size: 0.75rem; color: #64748b; border: 1px solid #e2e8f0; }
+ .p content { height: 320px; }
+ .p content iframe { width: 100%; height: 100%; border: none; }
+ footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
+ .footer-note { font-size: 0.875rem; color: #94a3b8; }
+ </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav">
-            <a href="index.html">Home</a>
-            <a href="blog/index.html">Blog</a>
-            <a href="#" class="active">Reviews</a>
-            <a href="tools.html">Tools</a>
-        </nav>
-        
-        <header>
-            <h1>Tool Reviews</h1>
-            <p class="subtitle">In-depth analysis of the tools we rely on</p>
-        </header>
+ <div class="container">
+ <nav class="nav">
+ <a href="index.html">Home</a>
+ <a href="blog/index.html">Blog</a>
+ <a href="#" class="active">Reviews</a>
+ <a href="tools.html">Tools</a>
+ </nav>
+ 
+ <header>
+ <h1>Tool Reviews</h1>
+ <p class="subtitle">In-depth analysis of the tools we rely on</p>
+ </header>
 
-        <section class="section">
-            <h2>Featured App Preview</h2>
-            <div class="preview-window">
-                <div class="preview-header">
-                    <span class="preview-dot"></span>
-                    <span class="preview-dot"></span>
-                    <span class="preview-dot"></span>
-                    <span class="preview-url">itemfits.com</span>
-                </div>
-                <div class="preview-content">
-                    <iframe src="https://www.itemfits.com" title="ItemFits Preview" loading="lazy"></iframe>
-                </div>
-            </div>
-            <p style="margin-top: 16px; font-size: 0.875rem; color: #64748b; text-align: center;">
-                <a href="itemfits.html" class="tool-link">Read the full review →</a>
-            </p>
-        </section>
+ <section class="section">
+ <h2>Featured App P /h2>
+ <div class="p window">
+ <div class="p header">
+ <span class="p dot"></span>
+ <span class="p dot"></span>
+ <span class="p dot"></span>
+ <span class="p url">itemfits.com</span>
+ </div>
+ <div class="p content">
+ <iframe src="https://www.itemfits.com" title="ItemFits P loading="lazy"></iframe>
+ </div>
+ </div>
+ <p style="margin-top: 16px; font-size: 0.875rem; color: #64748b; text-align: center;">
+ <a href="itemfits.html" class="tool-link">Read the full →</a>
+ </p>
+ </section>
 
-        <section class="section">
-            <h2>Featured</h2>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">ItemFits</span>
-                        <span class="tool-tag tag-featured">FEATURED</span>
-                    </div>
-                    <p class="tool-desc">Will it fit? Find out before checkout. The furniture planning tool built from a real moving fail.</p>
-                    <a href="reviews/itemfits.html" class="tool-link">Read Review →</a>
-                </div>
-            </div>
-        </section>
+ <section class="section">
+ <h2>Featured</h2>
+ <div class="tools-grid">
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">ItemFits</span>
+ <span class="tool-tag tag-featured">FEATURED</span>
+ </div>
+ <p class="tool-desc">Will it fit? Find out before checkout. The furniture planning tool built from a real moving fail.</p>
+ <a href="reviews/itemfits.html" class="tool-link">Read →</a>
+ </div>
+ </div>
+ </section>
 
-        <section class="section">
-            <h2>Primary Stack</h2>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">OpenClaw</span>
-                        <span class="tool-tag tag-review">UNDER REVIEW</span>
-                    </div>
-                    <p class="tool-desc">AI orchestration platform running KAI — learning curve, but promising</p>
-                    <a href="reviews/openclaw.html" class="tool-link">Read Review →</a>
-                </div>
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">FFmpeg</span>
-                        <span class="tool-tag tag-review">USING DAILY</span>
-                    </div>
-                    <p class="tool-desc">Media processing powerhouse — the unsung hero of audio/video</p>
-                    <a href="reviews/ffmpeg.html" class="tool-link">Read Review →</a>
-                </div>
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">MiniMax</span>
-                        <span class="tool-tag tag-review">USING DAILY</span>
-                    </div>
-                    <p class="tool-desc">Primary AI model powering this project</p>
-                    <a href="reviews/minimax.html" class="tool-link">Read Review →</a>
-                </div>
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">OpenAI Whisper</span>
-                        <span class="tool-tag tag-review">USING DAILY</span>
-                    </div>
-                    <p class="tool-desc">Speech recognition — turns audio into text reliably</p>
-                    <a href="reviews/openai-whisper.html" class="tool-link">Read Review →</a>
-                </div>
-            </div>
-        </section>
+ <section class="section">
+ <h2>Primary Stack</h2>
+ <div class="tools-grid">
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">OpenClaw</span>
+ <span class="tool-tag tag- >UNDER /span>
+ </div>
+ <p class="tool-desc">AI orchestration platform running KAI — learning curve, but promising</p>
+ <a href="reviews/openclaw.html" class="tool-link">Read →</a>
+ </div>
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">FFmpeg</span>
+ <span class="tool-tag tag- >USING DAILY</span>
+ </div>
+ <p class="tool-desc">Media processing powerhouse — the unsung hero of audio/video</p>
+ <a href="reviews/ffmpeg.html" class="tool-link">Read →</a>
+ </div>
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">MiniMax</span>
+ <span class="tool-tag tag- >USING DAILY</span>
+ </div>
+ <p class="tool-desc">Primary AI model powering this project</p>
+ <a href="reviews/minimax.html" class="tool-link">Read →</a>
+ </div>
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">OpenAI Whisper</span>
+ <span class="tool-tag tag- >USING DAILY</span>
+ </div>
+ <p class="tool-desc">Speech recognition — turns audio into text reliably</p>
+ <a href="reviews/openai-whisper.html" class="tool-link">Read →</a>
+ </div>
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">Agent Zero</span>
+ <span class="tool-tag tag- >NEW</span>
+ </div>
+ <p class="tool-desc">Open-source AI agent framework — general-purpose, transparent, multi-agent</p>
+ <a href="reviews/agent-zero.html" class="tool-link">Read →</a>
+ </div>
+ </div>
+ </section>
 
-        <section class="section">
-            <h2>Google Ecosystem</h2>
-            <div class="tools-grid">
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">Google Colab</span>
-                        <span class="tool-tag tag-review">USING DAILY</span>
-                    </div>
-                    <p class="tool-desc">Free GPU-powered notebooks for experiments</p>
-                    <a href="reviews/google-colab.html" class="tool-link">Read Review →</a>
-                </div>
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">NotebookLM</span>
-                        <span class="tool-tag tag-review">USING DAILY</span>
-                    </div>
-                    <p class="tool-desc">AI-powered research assistant — turns your docs into conversations</p>
-                    <a href="reviews/notebooklm.html" class="tool-link">Read Review →</a>
-                </div>
-                <div class="tool-card">
-                    <div class="tool-header">
-                        <span class="tool-name">Gemini</span>
-                        <span class="tool-tag tag-review">USING DAILY</span>
-                    </div>
-                    <p class="tool-desc">Google's multimodal AI model — free tier is surprisingly capable</p>
-                    <a href="reviews/gemini.html" class="tool-link">Read Review →</a>
-                </div>
-            </div>
-        </section>
+ <section class="section">
+ <h2>Google Ecosystem</h2>
+ <div class="tools-grid">
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">Google Colab</span>
+ <span class="tool-tag tag- >USING DAILY</span>
+ </div>
+ <p class="tool-desc">Free GPU-powered notebooks for experiments</p>
+ <a href="reviews/google-colab.html" class="tool-link">Read →</a>
+ </div>
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">NotebookLM</span>
+ <span class="tool-tag tag- >USING DAILY</span>
+ </div>
+ <p class="tool-desc">AI-powered research assistant — turns your docs into conversations</p>
+ <a href="reviews/notebooklm.html" class="tool-link">Read →</a>
+ </div>
+ <div class="tool-card">
+ <div class="tool-header">
+ <span class="tool-name">Gemini</span>
+ <span class="tool-tag tag- >USING DAILY</span>
+ </div>
+ <p class="tool-desc">Google's multimodal AI model — free tier is surprisingly capable</p>
+ <a href="reviews/gemini.html" class="tool-link">Read →</a>
+ </div>
+ </div>
+ </section>
 
-        <a href="index.html" class="back-link">← Back to Home</a>
+ <a href="index.html" class="back-link">← Back to Home</a>
 
-        <footer>
-            <p class="footer-note">Iterating in public. No selling. Just observing.</p>
-        </footer>
-    </div>
+ <footer>
+ <p class="footer-note">Iterating in public. No selling. Just observing.</p>
+ </footer>
+ </div>
 </body>
 </html>
+
+
+

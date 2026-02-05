@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Tasks — TechQuest.AI</title>
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
+ .container { max-width: 700px; margin: 0 auto; padding: 80px 20px; }
+ .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; flex-wrap: wrap; }
+ .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+ .nav a:hover, .nav a.active { color: #1e293b; }
+ .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+ h1 { font-size: 2rem; color: #1e293b; margin-bottom: 8px; }
+ .subtitle { font-size: 1rem; color: #64748b; margin-bottom: 40px; }
+ 
+ .add-task { display: flex; gap: 12px; margin-bottom: 40px; }
+ .add-task input { flex: 1; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 1rem; outline: none; transition: border-color 0.2s; }
+ .add-task input:focus { border-color: #2563eb; }
+ .add-task select { padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 8px; font-size: 1rem; background: #fff; cursor: pointer; }
+ .add-task button { padding: 12px 24px; background: #2563eb; color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 500; cursor: pointer; transition: background 0.2s; }
+ .add-task button:hover { background: #1d4ed8; }
+ 
+ .stats { display: flex; gap: 24px; margin-bottom: 24px; font-size: 0.875rem; color: #64748b; }
+ .stats strong { color: #1e293b; }
+ 
+ .task-list { list-style: none; }
+ .task-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; margin-bottom: 12px; transition: all 0.2s; }
+ .task-item:hover { border-color: #cbd5e1; }
+ .task-item.completed { opacity: 0.6; }
+ .task-item.completed .task-text { text-decoration: line-through; color: #94a3b8; }
+ .task-checkbox { width: 20px; height: 20px; border: 2px solid #cbd5e1; border-radius: 4px; cursor: pointer; flex-shrink: 0; margin-top: 3px; display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+ .task-checkbox:hover { border-color: #2563eb; }
+ .task-checkbox.checked { background: #2563eb; border-color: #2563eb; }
+ .task-checkbox.checked::after { content: "✓"; color: #fff; font-size: 12px; font-weight: bold; }
+ .task-content { flex: 1; }
+ .task-text { font-size: 1rem; color: #1e293b; margin-bottom: 4px; }
+ .task-meta { font-size: 0.75rem; color: #94a3b8; display: flex; gap: 12px; }
+ .task-source { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: 0.65rem; font-weight: 600; text-transform: uppercase; }
+ .source-rob { background: #dbeafe; color: #1e40af; }
+ .source-kai { background: #fce7f3; color: #9d174d; }
+ .source-backlog { background: #f3f4f6; color: #4b5563; }
+ .task-delete { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 0.875rem; padding: 4px 8px; border-radius: 4px; transition: all 0.2s; opacity: 0; }
+ .task-item:hover .task-delete { opacity: 1; }
+ .task-delete:hover { background: #fee2e2; color: #dc2626; }
+ 
+ .empty-state { text-align: center; padding: 60px 20px; color: #94a3b8; }
+ .empty-state-icon { font-size: 3rem; margin-bottom: 16px; }
+ 
+ .clear-completed { display: inline-block; margin-top: 20px; background: none; border: none; color: #64748b; font-size: 0.875rem; cursor: pointer; padding: 8px 16px; border-radius: 6px; transition: all 0.2s; }
+ .clear-completed:hover { background: #f1f5f9; color: #1e293b; }
+ 
+ .back-link { display: inline-block; margin-top: 40px; color: #64748b; text-decoration: none; font-size: 0.875rem; }
+ .back-link:hover { color: #2563eb; }
+ </style>
+</head>
+<body>
+ <div class="container">
+ <nav class="nav">
+ <a href="index.html">Home</a>
+ <a href="blog/index.html">Blog</a>
+ <a href="reviews/index.html">Reviews</a>
+ <a href="blog/walkthroughs.html">Walkthroughs</a>
+ <a href="resources.html">Resources</a>
+ <a href="kai-corner.html">Ty's Corner</a>
+ <a href="tools.html">Tools</a>
+ <a href="#" class="active">Tasks</a>
+ </nav>
+ 
+ <header>
+ <h1>Tasks</h1>
+ <p class="subtitle">What we're working on. Added by Rob or suggested by KAI.</p>
+ </header>
+ 
+ <div class="add-task">
+ <select id="taskSource">
+ <option value="rob">Rob's</option>
+ <option value="kai">KAI's suggestion</option>
+ <option value="backlog">Backlog</option>
+ </select>
+ <input type="text" id="taskInput" placeholder="Add a task..." autocomplete="off">
+ <button onclick="addTask()">Add</button>
+ </div>
+ 
+ <div class="stats">
+ <span><strong id="totalCount">0</strong> total</span>
+ <span><strong id="pendingCount">0</strong> /span>
+ <span><strong id="completedCount">0</strong> done</span>
+ </div>
+ 
+ <ul class="task-list" id="taskList"></ul>
+ 
+ <div class="empty-state" id="emptyState">
+ <div class="empty-state-icon">📝</div>
+ <p>No tasks yet. Add one above.</p>
+ </div>
+ 
+ <button class="clear-completed" onclick="clearCompleted()" id="clearBtn" style="display: none;">Clear completed</button>
+ 
+ <a href="index.html" class="back-link">← Back to Home</a>
+ </div>
+ 
+ <script>
+ let tasks = JSON.parse(localStorage.getItem('techquest-tasks') || '[]');
+ 
+ function saveTasks() {
+ localStorage.setItem('techquest-tasks', JSON.stringify(tasks));
+ renderTasks();
+ }
+ 
+ function addTask() {
+ const input = document.getElementById('taskInput');
+ const source = document.getElementById('taskSource');
+ const text = input.value.trim();
+ 
+ if (text) {
+ tasks.unshift({
+ id: Date.now(),
+ text: text,
+ source: source.value,
+ completed: false,
+ createdAt: new Date().toISOString()
+ });
+ input.value = '';
+ saveTasks();
+ }
+ }
+ 
+ function toggleTask(id) {
+ const task = tasks.find(t => t.id === id);
+ if (task) {
+ task.completed = !task.completed;
+ saveTasks();
+ }
+ }
+ 
+ function deleteTask(id) {
+ tasks = tasks.filter(t => t.id !== id);
+ saveTasks();
+ }
+ 
+ function clearCompleted() {
+ tasks = tasks.filter(t => !t.completed);
+ saveTasks();
+ }
+ 
+ function getSourceClass(source) {
+ switch(source) {
+ case 'rob': return 'source-rob';
+ case 'kai': return 'source-kai';
+ case 'backlog': return 'source-backlog';
+ default: return 'source-backlog';
+ }
+ }
+ 
+ function getSourceLabel(source) {
+ switch(source) {
+ case 'rob': return "Rob's";
+ case 'kai': return "KAI's";
+ case 'backlog': return 'Backlog';
+ default: return 'Backlog';
+ }
+ }
+ 
+ function formatDate(dateStr) {
+ const date = new Date(dateStr);
+ const now = new Date();
+ const diff = now - date;
+ const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+ 
+ if (days === 0) return 'today';
+ if (days === 1) return 'yesterday';
+ if (days < 7) return `${days} days ago`;
+ return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+ }
+ 
+ function renderTasks() {
+ const list = document.getElementById('taskList');
+ const emptyState = document.getElementById('emptyState');
+ const clearBtn = document.getElementById('clearBtn');
+ 
+ const total = tasks.length;
+ const completed = tasks.filter(t => t.completed).length;
+ const total - completed;
+ 
+ document.getElementById('totalCount').textContent = total;
+ document.getElementById('pendingCount').textContent = 
+ document.getElementById('completedCount').textContent = completed;
+ 
+ if (tasks.length === 0) {
+ list.innerHTML = '';
+ emptyState.style.display = 'block';
+ clearBtn.style.display = 'none';
+ return;
+ }
+ 
+ emptyState.style.display = 'none';
+ clearBtn.style.display = completed > 0 ? 'inline-block' : 'none';
+ 
+ list.innerHTML = tasks.map(task => `
+ <li class="task-item ${task.completed ? 'completed' : ''}">
+ <div class="task-checkbox ${task.completed ? 'checked' : ''}" onclick="toggleTask(${task.id})"></div>
+ <div class="task-content">
+ <div class="task-text">${task.text}</div>
+ <div class="task-meta">
+ <span class="task-source ${getSourceClass(task.source)}">${getSourceLabel(task.source)}</span>
+ <span>${formatDate(task.createdAt)}</span>
+ </div>
+ </div>
+ <button class="task-delete" onclick="deleteTask(${task.id})">Delete</button>
+ </li>
+ `).join('');
+ }
+ 
+ document.getElementById('taskInput').addEventListener('keypress', function(e) {
+ if (e.key === 'Enter') addTask();
+ });
+ 
+ renderTasks();
+ </script>
+</body>
+</html>
+
+

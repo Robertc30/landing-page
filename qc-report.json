@@ -1,0 +1,527 @@
+{
+  "timestamp": "2026-02-05T14:09:08.057180",
+  "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
+  "total_files_scanned": 24,
+  "total_issues": 63,
+  "errors": 0,
+  "warnings": 56,
+  "info": 7,
+  "issues": [
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: images\\day-two-2.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\file_41---e6601e50-7552-4a34-999a-8ada3ca2bb4a.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\kai-team.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\landing-page-mobile.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: images\\day-two-3.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\kewl-kai.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: images\\day-two-1.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "index.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 54
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "index.html",
+      "message": "Development marker found: review",
+      "details": "s/itemfits.html\" class=\"featured-link\">Read the story</a>",
+      "line": 132
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "index.html",
+      "message": "Development marker found: review",
+      "details": "s/openclaw.html\" class=\"tool-link\"> →</a>",
+      "line": 157
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "index.html",
+      "message": "Development marker found: review",
+      "details": "s/ffmpeg.html\" class=\"tool-link\"> →</a>",
+      "line": 164
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "index.html",
+      "message": "Development marker found: review",
+      "details": "s/minimax.html\" class=\"tool-link\"> →</a>",
+      "line": 171
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "index.html",
+      "message": "Development marker found: review",
+      "details": "s/openai-whisper.html\" class=\"tool-link\"> →</a>",
+      "line": 178
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "kai-corner.html",
+      "message": "Development marker found: todo",
+      "details": "s\">",
+      "line": 58
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "resources.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 53
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tasks.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 63
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tasks.html",
+      "message": "Development marker found: pending",
+      "details": "Count\">0</strong> /span>",
+      "line": 88
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tasks.html",
+      "message": "Development marker found: pending",
+      "details": "Count').textContent =",
+      "line": 188
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 53
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/itemfits.html\" class=\"featured-link\">Read the story</a>",
+      "line": 72
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/openclaw.html\" class=\"tool-link\">Read →</a>",
+      "line": 85
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/ffmpeg.html\" class=\"tool-link\">Read →</a>",
+      "line": 93
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/minimax.html\" class=\"tool-link\">Read →</a>",
+      "line": 101
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/openai-whisper.html\" class=\"tool-link\">Read →</a>",
+      "line": 109
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "tools.html",
+      "message": "Development marker found: review",
+      "details": "s/agent-zero.html\" class=\"tool-link\">Read →</a>",
+      "line": 117
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Development marker found: review",
+      "details": "s/openclaw.html\">Reviews</a>",
+      "line": 38
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Development marker found: bug",
+      "details": "s to fix—they're constraints to work within. Every AI has limits. The trick is building systems that respect them instead of fighting them.",
+      "line": 53
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 42
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Development marker found: review",
+      "details": "s/minimax.html\" class=\"tool-tag\" style=\"text-decoration: none;\">MiniMax ↗</a>. Rob wanted more — he wanted the full picture of what's running in the background.</p>",
+      "line": 60
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Development marker found: Review",
+      "details": "s page\" style=\"width: 100%; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08);\">",
+      "line": 98
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 39
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 38
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\index.html",
+      "message": "Development marker found: bug",
+      "details": "ging context windows, and discovering that GitHub tokens need actual scopes to work...</p>",
+      "line": 75
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 52
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Development marker found: review",
+      "details": "er, debugger, UX, etc.)</li>",
+      "line": 76
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Development marker found: Review",
+      "details": "er</li>",
+      "line": 218
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Development marker found: bug",
+      "details": "ger</li>",
+      "line": 219
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Development marker found: Review",
+      "details": "er refines output</li>",
+      "line": 273
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\walkthroughs.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 40
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Development marker found: Review",
+      "details": "ing landing page QC findings</li><li>Supporting blog post generation</li><li>Monitoring site performance</li><li>Writing daily KAI insights</li>",
+      "line": 37
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\agent-zero.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\" class=\"back-link\">← Back to Reviews</a>",
+      "line": 26
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\agent-zero.html",
+      "message": "Development marker found: Review",
+      "details": "ed: 2026-02-04</p>",
+      "line": 29
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Development marker found: Review",
+      "details": "ed February 3, 2026 · Use case: Media & Automation</p>",
+      "line": 47
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\gemini.html",
+      "message": "Development marker found: Review",
+      "details": "ed February 3, 2026 · Use case: AI & Productivity</p>",
+      "line": 47
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\google-colab.html",
+      "message": "Development marker found: Review",
+      "details": "ed February 3, 2026 · Use case: Development & AI</p>",
+      "line": 47
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s of tools and technologies that power TechQuest.AI. From AI models to automation platforms.\">",
+      "line": 6
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: Review",
+      "details": "s — TechQuest.AI</title>",
+      "line": 7
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: Review",
+      "details": "s</a>",
+      "line": 52
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: Review",
+      "details": "s</h1>",
+      "line": 57
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/itemfits.html\" class=\"tool-link\">Read →</a>",
+      "line": 88
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/openclaw.html\" class=\"tool-link\">Read →</a>",
+      "line": 102
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/ffmpeg.html\" class=\"tool-link\">Read →</a>",
+      "line": 110
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/minimax.html\" class=\"tool-link\">Read →</a>",
+      "line": 118
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/openai-whisper.html\" class=\"tool-link\">Read →</a>",
+      "line": 126
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/agent-zero.html\" class=\"tool-link\">Read →</a>",
+      "line": 134
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/google-colab.html\" class=\"tool-link\">Read →</a>",
+      "line": 148
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/notebooklm.html\" class=\"tool-link\">Read →</a>",
+      "line": 156
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s/gemini.html\" class=\"tool-link\">Read →</a>",
+      "line": 164
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\itemfits.html",
+      "message": "Development marker found: Review",
+      "details": "s</a>",
+      "line": 44
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\minimax.html",
+      "message": "Development marker found: Review",
+      "details": "s</a>",
+      "line": 57
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\notebooklm.html",
+      "message": "Development marker found: Review",
+      "details": "ed February 3, 2026 · Use case: Research & AI</p>",
+      "line": 47
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\openai-whisper.html",
+      "message": "Development marker found: Review",
+      "details": "ed February 3, 2026 · Use case: AI & Automation</p>",
+      "line": 47
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\openclaw.html",
+      "message": "Development marker found: Review",
+      "details": "ed February 3, 2026 · Use case: AI & Automation</p>",
+      "line": 47
+    }
+  ],
+  "summary": {
+    "passed": true,
+    "score": 0,
+    "check_counts": {
+      "broken_links": 0,
+      "missing_images": 0,
+      "orphaned_images": 7,
+      "todo_markers": 56,
+      "empty_files": 0,
+      "html_structure": 0
+    }
+  }
+}

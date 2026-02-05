@@ -1,0 +1,1215 @@
+{
+  "timestamp": "2026-02-05T14:09:08.444075",
+  "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
+  "total_files_analyzed": 24,
+  "readability_scores": {
+    "average": 53.7240475398414,
+    "min": 16.5977642276423,
+    "max": 92.965,
+    "files_analyzed": 24
+  },
+  "total_issues": 148,
+  "issues": [
+    {
+      "severity": "warning",
+      "category": "readability",
+      "file": "blog\\index.html",
+      "message": "High percentage of long sentences (33%)",
+      "suggestion": "Consider breaking up long sentences for better readability",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "readability",
+      "file": "blog\\index.html",
+      "message": "High percentage of long paragraphs (50%)",
+      "suggestion": "Consider breaking long paragraphs into smaller chunks",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "readability",
+      "file": "reviews\\notebooklm.html",
+      "message": "High percentage of long sentences (38%)",
+      "suggestion": "Consider breaking up long sentences for better readability",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "resources.html",
+      "message": "Vague word found: 'good'",
+      "suggestion": "Consider using a more specific term instead of 'good'",
+      "line": 89
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "resources.html",
+      "message": "Vague word found: 'things'",
+      "suggestion": "Consider using a more specific term instead of 'things'",
+      "line": 150
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Vague word found: 'great'",
+      "suggestion": "Consider using a more specific term instead of 'great'",
+      "line": 48
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Vague word found: 'things'",
+      "suggestion": "Consider using a more specific term instead of 'things'",
+      "line": 50
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Vague word found: 'interesting'",
+      "suggestion": "Consider using a more specific term instead of 'interesting'",
+      "line": 69
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Vague word found: 'good'",
+      "suggestion": "Consider using a more specific term instead of 'good'",
+      "line": 52
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Vague word found: 'good'",
+      "suggestion": "Consider using a more specific term instead of 'good'",
+      "line": 55
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-04-hiring-lesson.html",
+      "message": "Vague word found: 'interesting'",
+      "suggestion": "Consider using a more specific term instead of 'interesting'",
+      "line": 62
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-04-hiring-lesson.html",
+      "message": "Vague word found: 'nice'",
+      "suggestion": "Consider using a more specific term instead of 'nice'",
+      "line": 88
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Vague word found: 'interesting'",
+      "suggestion": "Consider using a more specific term instead of 'interesting'",
+      "line": 71
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\index.html",
+      "message": "Vague word found: 'really'",
+      "suggestion": "Consider using a more specific term instead of 'really'",
+      "line": 55
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Vague word found: 'things'",
+      "suggestion": "Consider using a more specific term instead of 'things'",
+      "line": 319
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "reviews\\agent-zero.html",
+      "message": "Vague word found: 'things'",
+      "suggestion": "Consider using a more specific term instead of 'things'",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Vague word found: 'probably'",
+      "suggestion": "Consider using a more specific term instead of 'probably'",
+      "line": 49
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "reviews\\itemfits.html",
+      "message": "Vague word found: 'very'",
+      "suggestion": "Consider using a more specific term instead of 'very'",
+      "line": 72
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "reviews\\itemfits.html",
+      "message": "Vague word found: 'bad'",
+      "suggestion": "Consider using a more specific term instead of 'bad'",
+      "line": 73
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "reviews\\notebooklm.html",
+      "message": "Vague word found: 'things'",
+      "suggestion": "Consider using a more specific term instead of 'things'",
+      "line": 76
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "reviews\\openclaw.html",
+      "message": "Vague word found: 'things'",
+      "suggestion": "Consider using a more specific term instead of 'things'",
+      "line": 52
+    },
+    {
+      "severity": "suggestion",
+      "category": "heading_structure",
+      "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Skipped heading level: h1 to h3",
+      "suggestion": "Use consecutive heading levels (h1 → h2 → h3, etc.)",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "heading_structure",
+      "file": "reviews\\minimax.html",
+      "message": "Skipped heading level: h2 to h4",
+      "suggestion": "Use consecutive heading levels (h1 → h2 → h3, etc.)",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "kai-corner.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 34
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "kai-corner.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 34
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 111
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 111
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 87
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 87
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 96
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 96
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 97
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 97
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 98
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 98
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Image missing title attribute",
+      "suggestion": "Add title attribute for better tooltip behavior",
+      "line": 74
+    },
+    {
+      "severity": "suggestion",
+      "category": "image_accessibility",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Image missing width/height attributes",
+      "suggestion": "Add explicit width and height to prevent layout shifts",
+      "line": 74
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 52
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 53
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 157
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 164
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 171
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 178
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "resources.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 51
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "resources.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 52
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "tasks.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 61
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "tasks.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 62
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "tools.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 51
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "tools.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 52
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 36
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 37
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 41
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 37
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 38
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 36
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 37
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 50
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 51
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\walkthroughs.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 38
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\walkthroughs.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\gemini.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\gemini.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\google-colab.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\google-colab.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 50
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\index.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 51
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\itemfits.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 42
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\itemfits.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 43
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\minimax.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 55
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\minimax.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 56
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\notebooklm.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\notebooklm.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\openai-whisper.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\openai-whisper.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\openclaw.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "reviews\\openclaw.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 40
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "kai-corner.html",
+      "message": "Title too short (26 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
+      "file": "kai-corner.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "tasks.html",
+      "message": "Title too short (20 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
+      "file": "tasks.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "tools.html",
+      "message": "Title too short (27 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Title too long (79 chars)",
+      "suggestion": "Keep title under 70 characters to avoid truncation",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
+      "file": "blog\\agent-zero-walkthrough.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "blog\\index.html",
+      "message": "Title too short (19 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "blog\\walkthroughs.html",
+      "message": "Title too short (27 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
+      "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\agent-zero.html",
+      "message": "Title too short (23 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
+      "file": "reviews\\agent-zero.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Title too short (21 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\gemini.html",
+      "message": "Title too short (21 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\google-colab.html",
+      "message": "Title too short (27 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\index.html",
+      "message": "Title too short (22 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\itemfits.html",
+      "message": "Title too short (23 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\minimax.html",
+      "message": "Title too short (22 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\notebooklm.html",
+      "message": "Title too short (25 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\openai-whisper.html",
+      "message": "Title too short (29 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "reviews\\openclaw.html",
+      "message": "Title too short (23 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "index.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "index.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "kai-corner.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "kai-corner.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "resources.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "resources.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "tasks.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "tasks.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "tools.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "tools.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-02-openclaw-setup.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-03-landing-page-updates.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-04-hiring-lesson.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-04-hiring-lesson.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-04-rolling-day-three.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\agent-zero-walkthrough.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\agent-zero-walkthrough.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\index.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\index.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\openclaw-anti-gravity-walkthrough.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\walkthroughs.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\walkthroughs.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\agent-zero.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\agent-zero.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\ffmpeg.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\gemini.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\gemini.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\google-colab.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\google-colab.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\index.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\index.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\itemfits.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\itemfits.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\minimax.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\minimax.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\notebooklm.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\notebooklm.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\openai-whisper.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\openai-whisper.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\openclaw.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "reviews\\openclaw.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    }
+  ],
+  "suggestions": {},
+  "summary": {
+    "overall_grade": "F",
+    "readability_avg": 53.7240475398414,
+    "total_suggestions": 140,
+    "total_warnings": 8,
+    "total_errors": 0,
+    "category_counts": {
+      "readability": 3,
+      "vague_language": 18,
+      "heading_structure": 2,
+      "image_accessibility": 14,
+      "link_quality": 42,
+      "seo": 21,
+      "typography": 48
+    }
+  }
+}

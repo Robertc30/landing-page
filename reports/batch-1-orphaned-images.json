@@ -1,0 +1,24 @@
+{
+  "name": "site-cleanup-batch-1",
+  "description": "Batch 1: Orphaned images cleanup",
+  "files": {
+    "orphaned_images": [
+      "blog/images/kai-team.jpg",
+      "blog/images/landing-page-mobile.jpg",
+      "images/day-two-2.jpg",
+      "images/day-two-3.jpg",
+      "TechQuestv1.png",
+      "blog/images/kewl-kai.jpg",
+      "images/day-two-1.jpg"
+    ],
+    "decisions": {
+      "kai-team.jpg": "KEEP - referenced in IDENTITY.md, used for KAI avatar",
+      "landing-page-mobile.jpg": "KEEP - referenced in memory/2026-02-03.md",
+      "day-two-2.jpg": "TBD - needs review",
+      "day-two-3.jpg": "TBD - needs review",
+      "TechQuestv1.png": "TBD - needs review",
+      "kewl-kai.jpg": "KEEP - KAI avatar image",
+      "day-two-1.jpg": "TBD - needs review"
+    }
+  }
+}
