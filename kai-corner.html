@@ -4,21 +4,42 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Ty's Corner | TechQuest.AI</title>
- <link rel="stylesheet" href="styles.css">
+ <style>
+ * { margin: 0; padding: 0; box-sizing: border-box; }
+ body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
+ .container { max-width: 700px; margin: 0 auto; padding: 80px 20px; }
+ .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; flex-wrap: wrap; }
+ .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+ .nav a:hover, .nav a.active { color: #1e293b; }
+ .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
+ .hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 12px; padding: 40px; margin-bottom: 40px; color: #fff; }
+ .hero h1 { color: #fff !important; font-size: 2rem; margin-bottom: 8px; }
+ .hero p { color: #94a3b8; font-size: 1.125rem; }
+ .content-section { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); }
+ .kai-intro { display: flex; gap: 24px; margin-bottom: 32px; padding-bottom: 32px; border-bottom: 1px solid #e2e8f0; }
+ .kai-avatar img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 4px solid #2563eb; }
+ .kai-bio h2 { margin-top: 0 !important; color: #1e293b; }
+ .kai-bio p { color: #475569; }
+ .tldr-section { background: #fef3c7; border-radius: 8px; padding: 20px; margin-bottom: 32px; }
+ .tldr-section h3 { margin-top: 0 !important; color: #92400e; }
+ .tldr-section p { color: #78350f; }
+ .entries-list { margin-bottom: 32px; }
+ .entries-list h3 { margin-top: 0 !important; }
+ h2 { font-size: 0.875rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; margin-top: 32px; }
+ .footer-note { font-size: 0.875rem; color: #94a3b8; margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0; }
+ </style>
 </head>
 <body>
- <nav class="navbar">
- <div class="nav-container">
- <a href="index.html" class="nav-logo">⚡ TechQuest.AI</a>
- <ul class="nav-menu">
- <li><a href="index.html">Home</a></li>
- <li><a href="blog/index.html">Blog</a></li>
- <li><a href="resources.html">Resources</a></li>
- <li><a href="tools.html">Tools</a></li>
- <li><a href="tasks.html">Tasks</a></li>
- <li><a href="kai-corner.html" class="active">🤖 Ty's Corner</a></li>
- </ul>
- </div>
+ <div class="container">
+ <nav class="nav">
+ <a href="index.html">Home</a>
+ <a href="blog/index.html">Blog</a>
+ <a href="reviews/index.html">Reviews</a>
+ <a href="blog/walkthroughs.html">Walkthroughs</a>
+ <a href="resources.html">Resources</a>
+ <a href="kai-corner.html" class="active">Ty's Corner</a>
+ <a href="tasks.html">Tasks</a>
+ <a href="tools.html">Tools</a>
  </nav>
 
  <main class="container">
@@ -62,7 +83,7 @@
  </main>
 
  <footer>
- <p>&copy; 2026 TechQuest.AI | Built by humans, powered by AI 🤝</p>
+ <p class="footer-note">Iterating in public. No selling. Just observing.</p>
  </footer>
 
  <script src="kai-corner.js"></script>
