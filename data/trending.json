@@ -1,0 +1,98 @@
+[
+  {
+    "name": "anthropics/claude-code",
+    "full_name": "anthropics/claude-code",
+    "description": "Claude's official CLI for Claude Code",
+    "stars": 12400,
+    "stars_today": 245,
+    "forks": 892,
+    "open_issues": 45,
+    "language": "TypeScript",
+    "url": "https://github.com/anthropics/claude-code",
+    "trending_score": 892.5
+  },
+  {
+    "name": "agent0ai/agent-zero",
+    "full_name": "agent0ai/agent-zero",
+    "description": "Open-source AI agent framework with persistent memory",
+    "stars": 14100,
+    "stars_today": 312,
+    "forks": 1523,
+    "open_issues": 89,
+    "language": "Python",
+    "url": "https://github.com/agent0ai/agent-zero",
+    "trending_score": 1078.5
+  },
+  {
+    "name": "open-webui/open-webui",
+    "full_name": "open-webui/open-webui",
+    "description": "User-friendly WebUI for LLMs",
+    "stars": 28700,
+    "stars_today": 567,
+    "forks": 3245,
+    "open_issues": 234,
+    "language": "Python",
+    "url": "https://github.com/open-webui/open-webui",
+    "trending_score": 1843.5
+  },
+  {
+    "name": "mendableai/firecrawl",
+    "full_name": "mendableai/firecrawl",
+    "description": "Turn websites into LLM-ready markdown",
+    "stars": 8900,
+    "stars_today": 189,
+    "forks": 567,
+    "open_issues": 34,
+    "language": "TypeScript",
+    "url": "https://github.com/mendableai/firecrawl",
+    "trending_score": 622.5
+  },
+  {
+    "name": "comfyui/ComfyUI",
+    "full_name": "comfyui/ComfyUI",
+    "description": "Powerful and modular GUI for Stable Diffusion",
+    "stars": 45600,
+    "stars_today": 423,
+    "forks": 4523,
+    "open_issues": 567,
+    "language": "Python",
+    "url": "https://github.com/comfyui/ComfyUI",
+    "trending_score": 1696.5
+  },
+  {
+    "name": "langchain-ai/langchain",
+    "full_name": "langchain-ai/langchain",
+    "description": "Building applications with LLMs through composability",
+    "stars": 89400,
+    "stars_today": 189,
+    "forks": 12345,
+    "open_issues": 1234,
+    "language": "Python",
+    "url": "https://github.com/langchain-ai/langchain",
+    "trending_score": 1450.5
+  },
+  {
+    "name": "ollama/ollama",
+    "full_name": "ollama/ollama",
+    "description": "Get up and running with Llama 3, Mistral, and other large language models",
+    "stars": 67800,
+    "stars_today": 789,
+    "forks": 4567,
+    "open_issues": 345,
+    "language": "Go",
+    "url": "https://github.com/ollama/ollama",
+    "trending_score": 2201.5
+  },
+  {
+    "name": "continue/continue",
+    "full_name": "continue/continue",
+    "description": "The open-source autopilot for coding",
+    "stars": 12300,
+    "stars_today": 267,
+    "forks": 789,
+    "open_issues": 67,
+    "language": "TypeScript",
+    "url": "https://github.com/continue/continue",
+    "trending_score": 822.5
+  }
+]

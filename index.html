@@ -44,6 +44,60 @@
  .featured-thumb { display: block; width: 100%; max-width: 200px; height: 120px; background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%); border-radius: 8px; margin-bottom: 16px; display: flex; align-items: center; justify-content: center; color: #64748b; font-size: 3rem; }
  footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
  .footer-note { font-size: 0.875rem; color: #94a3b8; }
+ 
+ /* GitHub Trending Ticker */
+ .ticker-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  background: linear-gradient(90deg, #fef9c3 0%, #fef08a 50%, #fef9c3 100%);
+  border-radius: 8px;
+  padding: 12px 0;
+  margin: 16px 0;
+ }
+ .ticker-content {
+  display: inline-block;
+  transition: transform 0.1s linear;
+ }
+ .ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  margin: 0 8px;
+  background: #fff;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+ }
+ .ticker-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+ }
+ .ticker-name {
+  color: #1e293b;
+  font-weight: 600;
+ }
+ .ticker-stars {
+  color: #92400e;
+  font-size: 0.75rem;
+ }
+ .ticker-lang {
+  display: inline-block;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  color: #fff;
+  font-weight: 600;
+ }
+ .ticker-error {
+  color: #991b1b;
+  font-size: 0.875rem;
+  padding: 8px 16px;
+ }
  </style>
 </head>
 <body>
@@ -129,8 +183,10 @@
  <span class="featured-name">🔥 GitHub Trending</span>
  <span class="featured-tag" style="background: #eab308;">LIVE</span>
  </div>
- <p class="featured-desc">Repos that are popping off right now...</p>
- <p class="featured-context"><em>GitHub trending ticker coming soon...</em></p>
+ <div class="ticker-wrapper">
+ <div id="trending-ticker-content" class="ticker-content"></div>
+ </div>
+ <p class="featured-context"><em>Auto-updating • Data via GitHub API</em></p>
  </div>
  </section>
 
@@ -206,6 +262,7 @@
  <p class="footer-note">Iterating in public. No selling. Just observing.</p>
  </footer>
  </div>
+ <script src="js/trending-ticker.js"></script>
 </body>
 </html>
 
