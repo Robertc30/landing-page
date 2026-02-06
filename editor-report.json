@@ -1,14 +1,14 @@
 {
-  "timestamp": "2026-02-05T15:39:30.724644",
+  "timestamp": "2026-02-05T20:11:01.787540",
   "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
   "total_files_analyzed": 24,
   "readability_scores": {
-    "average": 53.75400121157253,
+    "average": 53.24029453448994,
     "min": 16.5977642276423,
-    "max": 92.965,
+    "max": 91.20250000000001,
     "files_analyzed": 24
   },
-  "total_issues": 150,
+  "total_issues": 153,
   "issues": [
     {
       "severity": "warning",
@@ -40,7 +40,7 @@
       "file": "resources.html",
       "message": "Vague word found: 'good'",
       "suggestion": "Consider using a more specific term instead of 'good'",
-      "line": 89
+      "line": 92
     },
     {
       "severity": "suggestion",
@@ -48,7 +48,7 @@
       "file": "resources.html",
       "message": "Vague word found: 'things'",
       "suggestion": "Consider using a more specific term instead of 'things'",
-      "line": 150
+      "line": 153
     },
     {
       "severity": "suggestion",
@@ -120,7 +120,7 @@
       "file": "blog\\index.html",
       "message": "Vague word found: 'really'",
       "suggestion": "Consider using a more specific term instead of 'really'",
-      "line": 55
+      "line": 59
     },
     {
       "severity": "suggestion",
@@ -200,7 +200,7 @@
       "file": "index.html",
       "message": "Image missing title attribute",
       "suggestion": "Add title attribute for better tooltip behavior",
-      "line": 114
+      "line": 168
     },
     {
       "severity": "suggestion",
@@ -208,7 +208,7 @@
       "file": "index.html",
       "message": "Image missing width/height attributes",
       "suggestion": "Add explicit width and height to prevent layout shifts",
-      "line": 114
+      "line": 168
     },
     {
       "severity": "suggestion",
@@ -216,7 +216,7 @@
       "file": "kai-corner.html",
       "message": "Image missing title attribute",
       "suggestion": "Add title attribute for better tooltip behavior",
-      "line": 33
+      "line": 54
     },
     {
       "severity": "suggestion",
@@ -224,7 +224,7 @@
       "file": "kai-corner.html",
       "message": "Image missing width/height attributes",
       "suggestion": "Add explicit width and height to prevent layout shifts",
-      "line": 33
+      "line": 54
     },
     {
       "severity": "suggestion",
@@ -328,7 +328,7 @@
       "file": "index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
-      "line": 52
+      "line": 106
     },
     {
       "severity": "suggestion",
@@ -336,7 +336,7 @@
       "file": "index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
-      "line": 53
+      "line": 107
     },
     {
       "severity": "suggestion",
@@ -344,7 +344,7 @@
       "file": "index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
-      "line": 171
+      "line": 227
     },
     {
       "severity": "suggestion",
@@ -352,7 +352,7 @@
       "file": "index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
-      "line": 178
+      "line": 234
     },
     {
       "severity": "suggestion",
@@ -360,7 +360,7 @@
       "file": "index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
-      "line": 185
+      "line": 241
     },
     {
       "severity": "suggestion",
@@ -368,7 +368,23 @@
       "file": "index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
-      "line": 192
+      "line": 248
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "kai-corner.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 35
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "kai-corner.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 36
     },
     {
       "severity": "suggestion",
@@ -830,6 +846,14 @@
       "severity": "suggestion",
       "category": "typography",
       "file": "index.html",
+      "message": "Found 36 double spaces",
+      "suggestion": "Use single spaces between words",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "index.html",
       "message": "Possible missing space after punctuation",
       "suggestion": "Add a space after periods, exclamation marks, and question marks",
       "line": 0
@@ -1214,8 +1238,8 @@
   "suggestions": {},
   "summary": {
     "overall_grade": "F",
-    "readability_avg": 53.75400121157253,
-    "total_suggestions": 142,
+    "readability_avg": 53.24029453448994,
+    "total_suggestions": 145,
     "total_warnings": 8,
     "total_errors": 0,
     "category_counts": {
@@ -1223,9 +1247,9 @@
       "vague_language": 18,
       "heading_structure": 2,
       "image_accessibility": 16,
-      "link_quality": 42,
+      "link_quality": 44,
       "seo": 21,
-      "typography": 48
+      "typography": 49
     }
   }
 }

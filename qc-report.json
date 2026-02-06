@@ -1,41 +1,17 @@
 {
-  "timestamp": "2026-02-05T15:39:30.352333",
+  "timestamp": "2026-02-05T20:11:01.391857",
   "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
   "total_files_scanned": 24,
-  "total_issues": 63,
+  "total_issues": 64,
   "errors": 0,
-  "warnings": 56,
+  "warnings": 57,
   "info": 7,
   "issues": [
     {
       "severity": "info",
       "category": "orphaned_image",
       "file": "global",
-      "message": "Orphaned image: images\\day-two-3.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
-      "message": "Orphaned image: images\\day-two-1.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
       "message": "Orphaned image: blog\\images\\kewl-kai.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
-      "message": "Orphaned image: blog\\images\\kai-team.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
     },
@@ -59,6 +35,30 @@
       "severity": "info",
       "category": "orphaned_image",
       "file": "global",
+      "message": "Orphaned image: images\\day-two-3.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\kai-team.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: images\\day-two-1.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
       "message": "Orphaned image: blog\\images\\file_41---e6601e50-7552-4a34-999a-8ada3ca2bb4a.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
@@ -69,7 +69,7 @@
       "file": "index.html",
       "message": "Development marker found: review",
       "details": "s/index.html\">Reviews</a>",
-      "line": 54
+      "line": 108
     },
     {
       "severity": "warning",
@@ -77,7 +77,7 @@
       "file": "index.html",
       "message": "Development marker found: review",
       "details": "s/itemfits.html\" class=\"featured-link\">Read the story</a>",
-      "line": 146
+      "line": 202
     },
     {
       "severity": "warning",
@@ -85,7 +85,7 @@
       "file": "index.html",
       "message": "Development marker found: review",
       "details": "s/openclaw.html\" class=\"tool-link\"> →</a>",
-      "line": 171
+      "line": 227
     },
     {
       "severity": "warning",
@@ -93,7 +93,7 @@
       "file": "index.html",
       "message": "Development marker found: review",
       "details": "s/ffmpeg.html\" class=\"tool-link\"> →</a>",
-      "line": 178
+      "line": 234
     },
     {
       "severity": "warning",
@@ -101,7 +101,7 @@
       "file": "index.html",
       "message": "Development marker found: review",
       "details": "s/minimax.html\" class=\"tool-link\"> →</a>",
-      "line": 185
+      "line": 241
     },
     {
       "severity": "warning",
@@ -109,7 +109,15 @@
       "file": "index.html",
       "message": "Development marker found: review",
       "details": "s/openai-whisper.html\" class=\"tool-link\"> →</a>",
-      "line": 192
+      "line": 248
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "kai-corner.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 37
     },
     {
       "severity": "warning",
@@ -117,7 +125,7 @@
       "file": "kai-corner.html",
       "message": "Development marker found: todo",
       "details": "s\">",
-      "line": 57
+      "line": 78
     },
     {
       "severity": "warning",
@@ -140,7 +148,7 @@
       "category": "todo_marker",
       "file": "tasks.html",
       "message": "Development marker found: pending",
-      "details": "Count\">0</strong> /span>",
+      "details": "Count\">0</strong> pending</span>",
       "line": 88
     },
     {
@@ -165,7 +173,7 @@
       "file": "tools.html",
       "message": "Development marker found: review",
       "details": "s/itemfits.html\" class=\"featured-link\">Read the story</a>",
-      "line": 72
+      "line": 75
     },
     {
       "severity": "warning",
@@ -173,7 +181,7 @@
       "file": "tools.html",
       "message": "Development marker found: review",
       "details": "s/openclaw.html\" class=\"tool-link\">Read →</a>",
-      "line": 85
+      "line": 88
     },
     {
       "severity": "warning",
@@ -181,7 +189,7 @@
       "file": "tools.html",
       "message": "Development marker found: review",
       "details": "s/ffmpeg.html\" class=\"tool-link\">Read →</a>",
-      "line": 93
+      "line": 96
     },
     {
       "severity": "warning",
@@ -189,7 +197,7 @@
       "file": "tools.html",
       "message": "Development marker found: review",
       "details": "s/minimax.html\" class=\"tool-link\">Read →</a>",
-      "line": 101
+      "line": 104
     },
     {
       "severity": "warning",
@@ -197,7 +205,7 @@
       "file": "tools.html",
       "message": "Development marker found: review",
       "details": "s/openai-whisper.html\" class=\"tool-link\">Read →</a>",
-      "line": 109
+      "line": 112
     },
     {
       "severity": "warning",
@@ -205,7 +213,7 @@
       "file": "tools.html",
       "message": "Development marker found: review",
       "details": "s/agent-zero.html\" class=\"tool-link\">Read →</a>",
-      "line": 117
+      "line": 120
     },
     {
       "severity": "warning",
@@ -269,7 +277,7 @@
       "file": "blog\\index.html",
       "message": "Development marker found: bug",
       "details": "ging context windows, and discovering that GitHub tokens need actual scopes to work...</p>",
-      "line": 75
+      "line": 79
     },
     {
       "severity": "warning",
@@ -397,7 +405,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: Review",
       "details": "s</h1>",
-      "line": 57
+      "line": 61
     },
     {
       "severity": "warning",
@@ -405,7 +413,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/itemfits.html\" class=\"tool-link\">Read →</a>",
-      "line": 88
+      "line": 92
     },
     {
       "severity": "warning",
@@ -413,7 +421,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/openclaw.html\" class=\"tool-link\">Read →</a>",
-      "line": 102
+      "line": 106
     },
     {
       "severity": "warning",
@@ -421,7 +429,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/ffmpeg.html\" class=\"tool-link\">Read →</a>",
-      "line": 110
+      "line": 114
     },
     {
       "severity": "warning",
@@ -429,7 +437,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/minimax.html\" class=\"tool-link\">Read →</a>",
-      "line": 118
+      "line": 122
     },
     {
       "severity": "warning",
@@ -437,7 +445,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/openai-whisper.html\" class=\"tool-link\">Read →</a>",
-      "line": 126
+      "line": 130
     },
     {
       "severity": "warning",
@@ -445,7 +453,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/agent-zero.html\" class=\"tool-link\">Read →</a>",
-      "line": 134
+      "line": 138
     },
     {
       "severity": "warning",
@@ -453,7 +461,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/google-colab.html\" class=\"tool-link\">Read →</a>",
-      "line": 148
+      "line": 152
     },
     {
       "severity": "warning",
@@ -461,7 +469,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/notebooklm.html\" class=\"tool-link\">Read →</a>",
-      "line": 156
+      "line": 160
     },
     {
       "severity": "warning",
@@ -469,7 +477,7 @@
       "file": "reviews\\index.html",
       "message": "Development marker found: review",
       "details": "s/gemini.html\" class=\"tool-link\">Read →</a>",
-      "line": 164
+      "line": 168
     },
     {
       "severity": "warning",
@@ -519,7 +527,7 @@
       "broken_links": 0,
       "missing_images": 0,
       "orphaned_images": 7,
-      "todo_markers": 56,
+      "todo_markers": 57,
       "empty_files": 0,
       "html_structure": 0
     }
