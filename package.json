@@ -1,0 +1,32 @@
+{
+  "name": "techquest-landing-page",
+  "version": "1.0.0",
+  "description": "TechQuest.AI Landing Page - Visual QC with Playwright",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:desktop": "playwright test --project=desktop",
+    "test:mobile": "playwright test --project=mobile-chrome",
+    "test:mobile:safari": "playwright test --project=mobile-safari",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "screenshot:baseline": "UPDATE_BASELINE=1 npx playwright test",
+    "report": "npx playwright show-report",
+    "install:browsers": "npx playwright install --with-deps chromium",
+    "clean": "rm -rf test-results/ screenshots/ playwright-report/"
+  },
+  "keywords": [
+    "playwright",
+    "visual-qc",
+    "testing",
+    "techquest"
+  ],
+  "author": "KAI",
+  "license": "MIT",
+  "dependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  }
+}
