@@ -4,6 +4,7 @@
   "description": "TechQuest.AI Landing Page - Visual QC with Playwright",
   "scripts": {
     "test": "playwright test",
+    "test:visual": "playwright test --reporter=line",
     "test:ui": "playwright test --ui",
     "test:desktop": "playwright test --project=desktop",
     "test:mobile": "playwright test --project=mobile-chrome",
