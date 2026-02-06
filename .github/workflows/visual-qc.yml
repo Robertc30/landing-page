@@ -1,0 +1,233 @@
+# Visual QC GitHub Actions Workflow
+# Runs on push to landing-page/ and daily at 08:00 EST
+
+name: Visual QC
+
+on:
+  push:
+    paths:
+      - 'landing-page/**'
+  pull_request:
+    paths:
+      - 'landing-page/**'
+  schedule:
+    - cron: '0 13 * * *'
+  workflow_dispatch:
+    inputs:
+      debug:
+        description: 'Run in debug mode'
+        required: false
+        default: 'false'
+
+env:
+  SITE_URL: 'https://robertc30.github.io/landing-page'
+  PLAYWRIGHT_BROWSERS_PATH: 0
+
+jobs:
+  visual-qc:
+    name: Visual QC
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - browser: desktop
+          - browser: mobile-chrome
+          - browser: mobile-safari
+    defaults:
+      run:
+        working-directory: ./landing-page
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: 'landing-page/package-lock.json'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Install Playwright
+        run: npx playwright install --with-deps chromium
+      
+      - name: Create directories
+        run: |
+          mkdir -p ../qc/${{ github.run_id }}
+          mkdir -p test-results
+          mkdir -p screenshots
+      
+      - name: Run Visual QC
+        id: run-tests
+        continue-on-error: true
+        env:
+          DEBUG: ${{ github.event.inputs.debug == 'true' && '1' || '' }}
+        run: |
+          PROJECT="${{ matrix.browser }}"
+          echo "Running Playwright tests for: $PROJECT"
+          npm run test:visual -- --project="$PROJECT" --reporter=json 2>&1 | tee ../test-results/output.txt
+          EXIT=$?
+          echo "EXIT_CODE=$EXIT" >> $GITHUB_ENV
+          exit $EXIT
+      
+      - name: Upload all screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: screenshots-${{ matrix.browser }}-${{ github.run_id }}
+          path: landing-page/screenshots/
+          retention-days: 14
+      
+      - name: Upload test results
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results-${{ matrix.browser }}-${{ github.run_id }}
+          path: landing-page/test-results/
+          retention-days: 14
+      
+      - name: Upload traces on failure
+        if: env.EXIT_CODE != '0'
+        uses: actions/upload-artifact@v4
+        with:
+          name: trace-${{ matrix.browser }}-${{ github.run_id }}
+          path: landing-page/test-results/trace.zip
+          retention-days: 14
+      
+      - name: Generate QC report
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          QC_DIR="../qc/${DATE}"
+          mkdir -p "$QC_DIR/screenshots" "$QC_DIR/test-results"
+          
+          # Copy test results
+          if [ -d "test-results" ]; then
+            cp -r test-results/* "$QC_DIR/test-results/" 2>/dev/null || true
+          fi
+          
+          # Copy screenshots
+          if [ -d "screenshots" ]; then
+            cp -r screenshots/* "$QC_DIR/screenshots/" 2>/dev/null || true
+          fi
+          
+          # Generate summary
+          TOTAL_TESTS=$(grep -o '"tests":[0-9]*' test-results/results.json 2>/dev/null | grep -o '[0-9]*' || echo "0")
+          FAILED_TESTS=$(grep -o '"failures":[0-9]*' test-results/results.json 2>/dev/null | grep -o '[0-9]*' || echo "0")
+          
+          cat > "$QC_DIR/SUMMARY.md" << EOF
+# Visual QC Summary - ${DATE}
+
+**Date:** ${DATE}
+**Run ID:** ${{ github.run_id }}
+**Browser:** ${{ matrix.browser }}
+**Status:** ${{ env.EXIT_CODE == '0' && '✅ PASSED' || '❌ FAILED' }}
+
+## Results
+
+| Metric | Value |
+|--------|-------|
+| Total Tests | ${TOTAL_TESTS} |
+| Failed | ${FAILED_TESTS} |
+| Exit Code | ${{ env.EXIT_CODE }} |
+
+## Artifacts
+
+- [Screenshots](./screenshots/)
+- [Test Results](./test-results/)
+- [Traces](./test-results/) (if failure)
+
+---
+Generated: $(date -u)
+EOF
+          
+          echo "QC report generated: $QC_DIR/SUMMARY.md"
+      
+      - name: Commit QC results
+        if: github.event_name == 'push'
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          cd ..
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add qc/$DATE
+          git commit -m "qc: Add visual QC results - $DATE" || true
+          git push || true
+        continue-on-error: true
+
+  summarize:
+    name: Summarize Results
+    runs-on: ubuntu-latest
+    needs: visual-qc
+    if: always()
+    steps:
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+          merge-multiple: false
+      
+      - name: Generate combined summary
+        id: summary
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          QC_DIR="qc/${DATE}"
+          
+          # Count artifacts
+          SCREENSHOTS=$(find artifacts -name "*.png" 2>/dev/null | wc -l)
+          TRACES=$(find artifacts -name "*.zip" 2>/dev/null | wc -l)
+          
+          # Generate combined summary
+          cat > "$QC_DIR/COMBINED.md" << EOF
+# Visual QC Combined Report - ${DATE}
+
+**Date:** ${DATE}
+**Run ID:** ${{ github.run_id }}
+**Status:** Review artifacts below
+
+## Total Artifacts
+
+| Type | Count |
+|------|-------|
+| Screenshots | ${SCREENSHOTS} |
+| Traces | ${TRACES} |
+
+## Per-Browser Status
+
+EOF
+          
+          # Add per-browser status
+          for dir in artifacts/; do
+            if [ -d "$dir" ]; then
+              BROWSER=$(echo "$dir" | sed 's/screenshots-//' | sed 's/-[0-9]*$//')
+              STATUS=$(grep -l "EXIT_CODE=0" "$dir"/*.txt 2>/dev/null && echo "✅ PASSED" || echo "❌ FAILED")
+              SCOUNT=$(find "$dir" -name "*.png" 2>/dev/null | wc -l)
+              echo "| $BROWSER | $STATUS | $SCOUNT | |" >> "$QC_DIR/COMBINED.md"
+            fi
+          done
+          
+          echo "" >> "$QC_DIR/COMBINED.md"
+          echo "---" >> "$QC_DIR/COMBINED.md"
+          echo "Generated: $(date -u)" >> "$QC_DIR/COMBINED.md"
+          
+          echo "Combined report: $QC_DIR/COMBINED.md"
+      
+      - name: Upload combined report
+        uses: actions/upload-artifact@v4
+        with:
+          name: qc-combined-${{ github.run_id }}
+          path: qc/
+          retention-days: 30
+
+  notify:
+    name: Notification
+    runs-on: ubuntu-latest
+    needs: [visual-qc, summarize]
+    if: always()
+    steps:
+      - name: Print status
+        run: |
+          echo "Visual QC Complete"
+          echo "Status: ${{ needs.visual-qc.result }}"
+          echo ""
+          echo "Review artifacts at: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
