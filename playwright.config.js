@@ -19,8 +19,8 @@ module.exports = defineConfig({
   // Retry flaky tests
   retries: process.env.CI ? 2 : 0,
   
-  // Workers for parallel
-  workers: process.env.CI ? 1 : undefined,
+  // Workers: 1 to prevent screenshot collisions when running tests in parallel
+  workers: 1,
   
   // Reporter - JSON for automation + line for local
   reporter: [
