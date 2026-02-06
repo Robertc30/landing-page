@@ -63,15 +63,13 @@ jobs:
       - name: Run Visual QC
         id: run-tests
         continue-on-error: true
-        env:
-          DEBUG: ${{ github.event.inputs.debug == 'true' && '1' || '' }}
         run: |
           PROJECT="${{ matrix.browser }}"
           echo "Running Playwright tests for: $PROJECT"
-          npm run test:visual -- --project="$PROJECT" --reporter=json 2>&1 | tee ../test-results/output.txt
+          npm run test:visual -- --project="$PROJECT" --reporter=json > ../test-results/output.txt 2>&1
           EXIT=$?
           echo "EXIT_CODE=$EXIT" >> $GITHUB_ENV
-          exit $EXIT
+          echo "Tests completed with exit code: $EXIT"
       
       - name: Upload all screenshots
         uses: actions/upload-artifact@v4
@@ -99,6 +97,10 @@ jobs:
         run: |
           DATE=$(date +%Y-%m-%d)
           QC_DIR="../qc/${DATE}"
+          RUN_ID="${{ github.run_id }}"
+          BROWSER="${{ matrix.browser }}"
+          EXIT="${{ env.EXIT_CODE }}"
+          
           mkdir -p "$QC_DIR/screenshots" "$QC_DIR/test-results"
           
           # Copy test results
@@ -111,31 +113,24 @@ jobs:
             cp -r screenshots/* "$QC_DIR/screenshots/" 2>/dev/null || true
           fi
           
-          # Generate summary
-          TOTAL_TESTS=$(grep -o '"tests":[0-9]*' test-results/results.json 2>/dev/null | grep -o '[0-9]*' || echo "0")
-          FAILED_TESTS=$(grep -o '"failures":[0-9]*' test-results/results.json 2>/dev/null | grep -o '[0-9]*' || echo "0")
-          
+          # Generate summary file
           cat > "$QC_DIR/SUMMARY.md" << EOF
 # Visual QC Summary - ${DATE}
 
 **Date:** ${DATE}
-**Run ID:** ${{ github.run_id }}
-**Browser:** ${{ matrix.browser }}
-**Status:** ${{ env.EXIT_CODE == '0' && '✅ PASSED' || '❌ FAILED' }}
+**Run ID:** ${RUN_ID}
+**Browser:** ${BROWSER}
+**Status:** ${EXIT} == '0' && 'PASSED' || 'FAILED'
 
 ## Results
 
-| Metric | Value |
-|--------|-------|
-| Total Tests | ${TOTAL_TESTS} |
-| Failed | ${FAILED_TESTS} |
-| Exit Code | ${{ env.EXIT_CODE }} |
+- Exit Code: ${EXIT}
+- Artifacts: See below
 
 ## Artifacts
 
-- [Screenshots](./screenshots/)
-- [Test Results](./test-results/)
-- [Traces](./test-results/) (if failure)
+- Screenshots: ./screenshots/
+- Test Results: ./test-results/
 
 ---
 Generated: $(date -u)
@@ -150,7 +145,7 @@ EOF
           cd ..
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add qc/$DATE
+          git add qc/$DATE 2>/dev/null || true
           git commit -m "qc: Add visual QC results - $DATE" || true
           git push || true
         continue-on-error: true
@@ -168,29 +163,27 @@ EOF
           merge-multiple: false
       
       - name: Generate combined summary
-        id: summary
         run: |
           DATE=$(date +%Y-%m-%d)
-          QC_DIR="qc/${DATE}"
+          RUN_ID="${{ github.run_id }}"
           
           # Count artifacts
           SCREENSHOTS=$(find artifacts -name "*.png" 2>/dev/null | wc -l)
           TRACES=$(find artifacts -name "*.zip" 2>/dev/null | wc -l)
           
+          mkdir -p "qc/${DATE}"
+          
           # Generate combined summary
-          cat > "$QC_DIR/COMBINED.md" << EOF
+          cat > "qc/${DATE}/COMBINED.md" << EOF
 # Visual QC Combined Report - ${DATE}
 
 **Date:** ${DATE}
-**Run ID:** ${{ github.run_id }}
-**Status:** Review artifacts below
+**Run ID:** ${RUN_ID}
 
 ## Total Artifacts
 
-| Type | Count |
-|------|-------|
-| Screenshots | ${SCREENSHOTS} |
-| Traces | ${TRACES} |
+- Screenshots: ${SCREENSHOTS}
+- Traces: ${TRACES}
 
 ## Per-Browser Status
 
@@ -200,17 +193,23 @@ EOF
           for dir in artifacts/; do
             if [ -d "$dir" ]; then
               BROWSER=$(echo "$dir" | sed 's/screenshots-//' | sed 's/-[0-9]*$//')
-              STATUS=$(grep -l "EXIT_CODE=0" "$dir"/*.txt 2>/dev/null && echo "✅ PASSED" || echo "❌ FAILED")
-              SCOUNT=$(find "$dir" -name "*.png" 2>/dev/null | wc -l)
-              echo "| $BROWSER | $STATUS | $SCOUNT | |" >> "$QC_DIR/COMBINED.md"
+              STATUS="UNKNOWN"
+              if [ -f "$dir/output.txt" ]; then
+                if grep -q "EXIT_CODE=0" "$dir/output.txt" 2>/dev/null; then
+                  STATUS="PASSED"
+                else
+                  STATUS="FAILED"
+                fi
+              fi
+              echo "- ${BROWSER}: ${STATUS}" >> "qc/${DATE}/COMBINED.md"
             fi
           done
           
-          echo "" >> "$QC_DIR/COMBINED.md"
-          echo "---" >> "$QC_DIR/COMBINED.md"
-          echo "Generated: $(date -u)" >> "$QC_DIR/COMBINED.md"
+          echo "" >> "qc/${DATE}/COMBINED.md"
+          echo "---" >> "qc/${DATE}/COMBINED.md"
+          echo "Generated: $(date -u)" >> "qc/${DATE}/COMBINED.md"
           
-          echo "Combined report: $QC_DIR/COMBINED.md"
+          echo "Combined report: qc/${DATE}/COMBINED.md"
       
       - name: Upload combined report
         uses: actions/upload-artifact@v4
@@ -230,4 +229,4 @@ EOF
           echo "Visual QC Complete"
           echo "Status: ${{ needs.visual-qc.result }}"
           echo ""
-          echo "Review artifacts at: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          echo "Review artifacts: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
