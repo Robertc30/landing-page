@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-02-05T20:11:01.391857",
+  "timestamp": "2026-02-05T21:41:33.133580",
   "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
   "total_files_scanned": 24,
   "total_issues": 64,
@@ -11,23 +11,7 @@
       "severity": "info",
       "category": "orphaned_image",
       "file": "global",
-      "message": "Orphaned image: blog\\images\\kewl-kai.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
-      "message": "Orphaned image: blog\\images\\landing-page-mobile.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
-      "message": "Orphaned image: images\\day-two-2.jpg",
+      "message": "Orphaned image: blog\\images\\kai-team.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
     },
@@ -43,7 +27,15 @@
       "severity": "info",
       "category": "orphaned_image",
       "file": "global",
-      "message": "Orphaned image: blog\\images\\kai-team.jpg",
+      "message": "Orphaned image: blog\\images\\landing-page-mobile.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\file_41---e6601e50-7552-4a34-999a-8ada3ca2bb4a.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
     },
@@ -59,7 +51,15 @@
       "severity": "info",
       "category": "orphaned_image",
       "file": "global",
-      "message": "Orphaned image: blog\\images\\file_41---e6601e50-7552-4a34-999a-8ada3ca2bb4a.jpg",
+      "message": "Orphaned image: images\\day-two-2.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\kewl-kai.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
     },
