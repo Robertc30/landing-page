@@ -1,10 +1,10 @@
 {
-  "timestamp": "2026-02-05T21:41:33.133580",
+  "timestamp": "2026-02-07T18:05:20.467737",
   "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
-  "total_files_scanned": 24,
-  "total_issues": 64,
+  "total_files_scanned": 27,
+  "total_issues": 75,
   "errors": 0,
-  "warnings": 57,
+  "warnings": 68,
   "info": 7,
   "issues": [
     {
@@ -19,23 +19,7 @@
       "severity": "info",
       "category": "orphaned_image",
       "file": "global",
-      "message": "Orphaned image: images\\day-two-3.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
       "message": "Orphaned image: blog\\images\\landing-page-mobile.jpg",
-      "details": "Image file exists but is not referenced in any HTML file",
-      "line": 0
-    },
-    {
-      "severity": "info",
-      "category": "orphaned_image",
-      "file": "global",
-      "message": "Orphaned image: blog\\images\\file_41---e6601e50-7552-4a34-999a-8ada3ca2bb4a.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
     },
@@ -52,6 +36,22 @@
       "category": "orphaned_image",
       "file": "global",
       "message": "Orphaned image: images\\day-two-2.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: blog\\images\\file_41---e6601e50-7552-4a34-999a-8ada3ca2bb4a.jpg",
+      "details": "Image file exists but is not referenced in any HTML file",
+      "line": 0
+    },
+    {
+      "severity": "info",
+      "category": "orphaned_image",
+      "file": "global",
+      "message": "Orphaned image: images\\day-two-3.jpg",
       "details": "Image file exists but is not referenced in any HTML file",
       "line": 0
     },
@@ -266,6 +266,62 @@
     {
       "severity": "warning",
       "category": "todo_marker",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Development marker found: pending",
+      "details": "{ background: #fff3cd; color: #856404; }",
+      "line": 21
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Development marker found: Bug",
+      "details": "s Squashed</h2>",
+      "line": 102
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Development marker found: bug",
+      "details": "</strong> — <code>tech_score</code> vs <code>technical_score</code> mismatch</li>",
+      "line": 109
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Development marker found: pending",
+      "details": "\">PENDING</span></td></tr>",
+      "line": 121
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Development marker found: pending",
+      "details": "\">PENDING</span></td></tr>",
+      "line": 122
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Development marker found: pending",
+      "details": "\">PENDING</span></td></tr>",
+      "line": 123
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\2026-02-07-day-seven-quiet-audit.html",
+      "message": "Development marker found: review",
+      "details": "s/index.html\">Reviews</a>",
+      "line": 40
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
       "file": "blog\\index.html",
       "message": "Development marker found: review",
       "details": "s/index.html\">Reviews</a>",
@@ -277,7 +333,7 @@
       "file": "blog\\index.html",
       "message": "Development marker found: bug",
       "details": "ging context windows, and discovering that GitHub tokens need actual scopes to work...</p>",
-      "line": 79
+      "line": 89
     },
     {
       "severity": "warning",
@@ -338,6 +394,30 @@
     {
       "severity": "warning",
       "category": "todo_marker",
+      "file": "blog\\kai\\kai-2026-02-06.html",
+      "message": "Development marker found: bug",
+      "details": "s fixed</span>",
+      "line": 37
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\kai\\kai-2026-02-06.html",
+      "message": "Development marker found: bug",
+      "details": "s:</strong> When refactoring, check that all variable names match (I had <code>tech_score</code> and <code>technical_score</code> mixed up).</li>",
+      "line": 53
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "blog\\kai\\kai-2026-02-06.html",
+      "message": "Development marker found: Pending",
+      "details": "Work</h2>",
+      "line": 57
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
       "file": "reviews\\agent-zero.html",
       "message": "Development marker found: review",
       "details": "s/index.html\" class=\"back-link\">← Back to Reviews</a>",
@@ -390,6 +470,14 @@
       "message": "Development marker found: Review",
       "details": "s — TechQuest.AI</title>",
       "line": 7
+    },
+    {
+      "severity": "warning",
+      "category": "todo_marker",
+      "file": "reviews\\index.html",
+      "message": "Development marker found: review",
+      "details": "s\" class=\"container\">",
+      "line": 48
     },
     {
       "severity": "warning",
@@ -527,7 +615,7 @@
       "broken_links": 0,
       "missing_images": 0,
       "orphaned_images": 7,
-      "todo_markers": 57,
+      "todo_markers": 68,
       "empty_files": 0,
       "html_structure": 0
     }

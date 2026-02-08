@@ -1,23 +1,15 @@
 {
-  "timestamp": "2026-02-05T21:41:33.541847",
+  "timestamp": "2026-02-07T18:05:20.900692",
   "base_path": "C:\\Users\\newta\\.openclaw\\workspace\\landing-page",
-  "total_files_analyzed": 24,
+  "total_files_analyzed": 27,
   "readability_scores": {
-    "average": 53.24029453448994,
+    "average": 54.28521802873721,
     "min": 16.5977642276423,
     "max": 91.20250000000001,
-    "files_analyzed": 24
+    "files_analyzed": 27
   },
-  "total_issues": 153,
+  "total_issues": 168,
   "issues": [
-    {
-      "severity": "warning",
-      "category": "readability",
-      "file": "blog\\index.html",
-      "message": "High percentage of long sentences (33%)",
-      "suggestion": "Consider breaking up long sentences for better readability",
-      "line": 0
-    },
     {
       "severity": "warning",
       "category": "readability",
@@ -117,10 +109,26 @@
     {
       "severity": "suggestion",
       "category": "vague_language",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Vague word found: 'interesting'",
+      "suggestion": "Consider using a more specific term instead of 'interesting'",
+      "line": 38
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
       "file": "blog\\index.html",
       "message": "Vague word found: 'really'",
       "suggestion": "Consider using a more specific term instead of 'really'",
-      "line": 59
+      "line": 64
+    },
+    {
+      "severity": "suggestion",
+      "category": "vague_language",
+      "file": "blog\\index.html",
+      "message": "Vague word found: 'interesting'",
+      "suggestion": "Consider using a more specific term instead of 'interesting'",
+      "line": 69
     },
     {
       "severity": "suggestion",
@@ -485,6 +493,22 @@
     {
       "severity": "suggestion",
       "category": "link_quality",
+      "file": "blog\\2026-02-07-day-seven-quiet-audit.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 38
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
+      "file": "blog\\2026-02-07-day-seven-quiet-audit.html",
+      "message": "Short link text without title/aria-label",
+      "suggestion": "Add title or aria-label for accessibility",
+      "line": 39
+    },
+    {
+      "severity": "suggestion",
+      "category": "link_quality",
       "file": "blog\\index.html",
       "message": "Short link text without title/aria-label",
       "suggestion": "Add title or aria-label for accessibility",
@@ -725,6 +749,14 @@
     {
       "severity": "warning",
       "category": "seo",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
       "file": "blog\\agent-zero-walkthrough.html",
       "message": "Missing meta description",
       "suggestion": "Add a 150-160 character meta description for SEO",
@@ -750,6 +782,22 @@
       "severity": "warning",
       "category": "seo",
       "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Missing meta description",
+      "suggestion": "Add a 150-160 character meta description for SEO",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "seo",
+      "file": "blog\\kai\\kai-2026-02-06.html",
+      "message": "Title too short (28 chars)",
+      "suggestion": "Aim for 50-60 characters for optimal SEO",
+      "line": 0
+    },
+    {
+      "severity": "warning",
+      "category": "seo",
+      "file": "blog\\kai\\kai-2026-02-06.html",
       "message": "Missing meta description",
       "suggestion": "Add a 150-160 character meta description for SEO",
       "line": 0
@@ -997,6 +1045,54 @@
     {
       "severity": "suggestion",
       "category": "typography",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Found 82 double spaces",
+      "suggestion": "Use single spaces between words",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-06-market-brainstorm.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-07-day-seven-quiet-audit.html",
+      "message": "Found 52 double spaces",
+      "suggestion": "Use single spaces between words",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-07-day-seven-quiet-audit.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\2026-02-07-day-seven-quiet-audit.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
       "file": "blog\\agent-zero-walkthrough.html",
       "message": "Possible missing space after punctuation",
       "suggestion": "Add a space after periods, exclamation marks, and question marks",
@@ -1070,6 +1166,30 @@
       "severity": "suggestion",
       "category": "typography",
       "file": "blog\\kai\\kai-2026-02-04.html",
+      "message": "Straight quotes found - consider using curly quotes",
+      "suggestion": "Use smart/curly quotes for professional typography",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\kai\\kai-2026-02-06.html",
+      "message": "Found 40 double spaces",
+      "suggestion": "Use single spaces between words",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\kai\\kai-2026-02-06.html",
+      "message": "Possible missing space after punctuation",
+      "suggestion": "Add a space after periods, exclamation marks, and question marks",
+      "line": 0
+    },
+    {
+      "severity": "suggestion",
+      "category": "typography",
+      "file": "blog\\kai\\kai-2026-02-06.html",
       "message": "Straight quotes found - consider using curly quotes",
       "suggestion": "Use smart/curly quotes for professional typography",
       "line": 0
@@ -1238,18 +1358,18 @@
   "suggestions": {},
   "summary": {
     "overall_grade": "F",
-    "readability_avg": 53.24029453448994,
-    "total_suggestions": 145,
-    "total_warnings": 8,
+    "readability_avg": 54.28521802873721,
+    "total_suggestions": 159,
+    "total_warnings": 9,
     "total_errors": 0,
     "category_counts": {
-      "readability": 3,
-      "vague_language": 18,
+      "readability": 2,
+      "vague_language": 20,
       "heading_structure": 2,
       "image_accessibility": 16,
-      "link_quality": 44,
-      "seo": 21,
-      "typography": 49
+      "link_quality": 46,
+      "seo": 24,
+      "typography": 58
     }
   }
 }
