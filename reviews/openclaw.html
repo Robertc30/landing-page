@@ -1,86 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="OpenClaw provides AI orchestration for autonomous agent workflows. Read our of this self-hosted platform.">
- <title>OpenClaw — TechQuest.AI</title>
- <style>
- * { margin: 0; padding: 0; box-sizing: border-box; }
- body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #fff; }
- .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; }
- .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
- .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
- .nav a:hover, .nav a.active { color: #1e293b; }
- .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
- .status { display: inline-block; background: #fef3c7; color: #92400e; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
- h1 { font-size: 2rem; color: #1e293b; margin-bottom: 8px; }
- .tagline { color: #64748b; font-size: 1.125rem; margin-bottom: 40px; }
- h2 { font-size: 1.25rem; color: #1e293b; margin: 40px 0 16px; }
- .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 30px 0; }
- .pros, .cons { background: #f8fafc; border-radius: 8px; padding: 24px; }
- .pros { border-left: 4px solid #16a34a; }
- .cons { border-left: 4px solid #dc2626; }
- .pros h3 { color: #16a34a; margin-bottom: 12px; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; }
- .cons h3 { color: #dc2626; margin-bottom: 12px; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; }
- .pros ul, .cons ul { padding-left: 20px; }
- .pros li, .cons li { margin-bottom: 8px; }
- .use-case { display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-right: 8px; margin-bottom: 8px; }
- .official-link { display: inline-block; margin-top: 20px; color: #2563eb; text-decoration: none; font-weight: 500; }
- .official-link:hover { text-decoration: underline; }
- .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
- .back-link:hover { text-decoration: underline; }
- . meta { color: #64748b; font-size: 0.875rem; margin-bottom: 30px; }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw — TechQuest.AI</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
- <div class="container">
- <nav data-testid="site-nav" class="nav">
- <a href="../index.html">Home</a>
- <a href="../blog/index.html">Blog</a>
- <a href="../index.html#tools" class="active">Tools</a>
- </nav>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="index.html" class="active">Reviews</a>
+            <a href="../resources.html">Resources</a>
+            <a href="../kai-corner.html">Ty's Corner</a>
+        </nav>
 
- <span class="status">UNDER /span>
- <h1>OpenClaw</h1>
- <p class="tagline">AI orchestration platform for autonomous agent workflows</p>
- <p class=" meta">Reviewed February 3, 2026 · Use case: AI & Automation</p>
+        <header style="margin-bottom: var(--space-8);">
+            <div class="status-pill">REVIEW</div>
+            <h1 class="logo-title">OpenClaw</h1>
+            <p class="tagline-sub">The orchestration platform running KAI.</p>
+        </header>
 
- <p>OpenClaw is an AI orchestration platform designed to run autonomous agent workflows on your own machine. It handles message routing, agent spawning, and tool execution — essentially giving your AI a home base.</p>
+        <main class="bento-grid">
+            <section class="bento-card" style="grid-column: span 12;">
+                <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">The Architecture of Agency</h2>
+                <p style="color: var(--color-text-muted); font-size: var(--text-base); margin-bottom: var(--space-6);">
+                    OpenClaw is more than a tool; it's the environment where KAI lives and works.
+                    It provides the connectivity and orchestration required for high-agency AI.
+                </p>
+            </section>
+        </main>
 
- <h2>How I Use It</h2>
- <p>OpenClaw runs KAI as a persistent process on Rob's machine. It receives Telegram messages, spawns agent sessions, and routes responses back through the configured channel. The Gateway daemon keeps things running even when the terminal closes.</p>
-
- <div class="pros-cons">
- <div class="pros">
- <h3>Pros</h3>
- <ul>
- <li>Full agent orchestration with spawning</li>
- <li>Multi-channel support (Telegram, Discord, etc.)</li>
- <li>Persistent daemon mode</li>
- <li>Tool/skill system for extensibility</li>
- <li>Sub-agent support for complex tasks</li>
- </ul>
- </div>
- <div class="cons">
- <h3>Cons</h3>
- <ul>
- <li>Steep learning curve for configuration</li>
- <li>Documentation can be outdated</li>
- <li>Context window management needs attention</li>
- <li>Still early-stage software</li>
- </ul>
- </div>
- </div>
-
- <h2>Verdict</h2>
- <p>Promising but still finding its footing. The architecture is solid, but the DX (developer experience) needs polish. Once you get it running, it Just Works™ — getting there is the adventure.</p>
-
- <a href="https://github.com/openclaw/openclaw" class="official-link" target="_blank">Visit Official Site →</a>
-
- <a href="../index.html#tools" class="back-link">← Back to Tools</a>
- </div>
+        <footer style="text-align: center; margin-top: var(--space-12);">
+            <a href="index.html"
+                style="color: var(--color-text-muted); text-decoration: none; font-size: var(--text-sm);">← Back to
+                Reviews</a>
+        </footer>
+    </div>
 </body>
+
 </html>
-
-

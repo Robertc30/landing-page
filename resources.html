@@ -1,162 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="Curated channels and resources that power TechQuest.AI — YouTube, Discord, tools, and learning.">
- <title>Recommended Channels — TechQuest.AI</title>
- <style>
- * { margin: 0; padding: 0; box-sizing: border-box; }
- body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
- .container { max-width: 900px; margin: 0 auto; padding: 80px 20px; }
- header { margin-bottom: 60px; }
- .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
- .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
- .nav a:hover, .nav a.active { color: #1e293b; }
- .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
- h1 { font-size: 2rem; color: #1e293b; margin-bottom: 12px; }
- .subtitle { font-size: 1.125rem; color: #64748b; margin-bottom: 40px; }
- .intro { font-size: 1.0625rem; color: #475569; max-width: 700px; margin-bottom: 50px; }
- .intro em { color: #94a3b8; font-style: normal; }
- h2 { font-size: 1.25rem; color: #1e293b; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 2px solid #e2e8f0; }
- .channels-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px; margin-bottom: 60px; }
- .channel-card { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 24px; transition: transform 0.2s, box-shadow 0.2s; }
- .channel-card:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.08); }
- .channel-header { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px; }
- .channel-avatar { width: 56px; height: 56px; border-radius: 12px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 700; font-size: 1.25rem; flex-shrink: 0; }
- .channel-meta { flex: 1; min-width: 0; }
- .channel-name { font-weight: 600; font-size: 1.125rem; color: #1e293b; margin-bottom: 4px; }
- .channel-desc { font-size: 0.9375rem; color: #64748b; line-height: 1.6; margin-bottom: 16px; }
- .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
- .tag { background: #f1f5f9; color: #475569; font-size: 0.75rem; padding: 4px 10px; border-radius: 6px; }
- .channel-why { background: #f8fafc; border-radius: 8px; padding: 16px; margin-bottom: 16px; }
- .channel-why-title { font-size: 0.75rem; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
- .channel-why-text { font-size: 0.875rem; color: #64748b; font-style: italic; }
- .cta-button { display: inline-flex; align-items: center; gap: 8px; background: #1e293b; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: background 0.2s; }
- .cta-button:hover { background: #334155; }
- .cta-button::after { content: "↗"; }
- .videos-section { margin-top: 60px; }
- .disclaimer { margin-top: 60px; padding-top: 30px; border-top: 1px solid #e2e8f0; font-size: 0.875rem; color: #94a3b8; font-style: italic; }
- .disclaimer em { font-style: normal; }
- footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid #e2e8f0; }
- .footer-note { font-size: 0.875rem; color: #94a3b8; }
- @media (max-width: 600px) {
- .channels-grid { grid-template-columns: 1fr; }
- }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources — TechQuest.AI</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
- <div data-testid="page-resources" class="container">
- <nav data-testid="site-nav" class="nav">
- <a href="index.html">Home</a>
- <a href="blog/index.html">Blog</a>
- <a href="reviews/index.html">Reviews</a>
- <a href="blog/walkthroughs.html">Walkthroughs</a>
- <a href="resources.html" class="active">Resources</a>
- <a href="kai-corner.html">Ty's Corner</a>
- <a href="tasks.html">Tasks</a>
- <a href="tools.html">Tools</a>
- </nav>
- 
- <header>
- <h1>Recommended Channels</h1>
- <p class="subtitle">Curated recommendations for builders, operators, and AI tinkerers</p>
- <p class="intro">
- A hand-picked list of YouTube channels that actually move the needle. 
- No fluff, no hype — just creators I've learned from. <em>Updated as I discover new ones.</em>
- </p>
- </header>
+    <div class="container">
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="blog/index.html">Blog</a>
+            <a href="reviews/index.html">Reviews</a>
+            <a href="resources.html" class="active">Resources</a>
+            <a href="kai-corner.html">Ty's Corner</a>
+        </nav>
 
- <section>
- <h2>Channels I Actually Watch</h2>
- <div class="channels-grid">
- <!-- Chris Sain -->
- <div class="channel-card">
- <div class="channel-header">
- <div class="channel-avatar" style="background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);">CS</div>
- <div class="channel-meta">
- <div class="channel-name">Chris Sain</div>
- </div>
- </div>
- <p class="channel-desc">
- Top-ranked stock trading education channel. Clear breakdowns of trading strategies, technical analysis, and market education for beginners and intermediate traders.
- </p>
- <div class="tags">
- <span class="tag">Stock Trading</span>
- <span class="tag">Technical Analysis</span>
- <span class="tag">Education</span>
- <span class="tag">Trading Strategies</span>
- </div>
- <div class="channel-why">
- <div class="channel-why-title">Why I Recommend It</div>
- <p class="channel-why-text">"My top dog, ranked number one on my stock trading YouTube channels in my book. Not actual financial advice, but it's a good stepping stone." — Rob</p>
- </div>
- <a href="https://youtube.com/@chrissain1?si=llwYYWyzoYKQ8NAi" target="_blank" rel="noopener" class="cta-button">View Channel</a>
- </div>
+        <header style="margin-bottom: var(--space-12);">
+            <div class="status-pill">Curated Stack</div>
+            <h1 class="logo-title">Learning & Tools</h1>
+            <p class="tagline-sub">External resources that move the needle for us.</p>
+        </header>
 
- <!-- In The World of AI -->
- <div class="channel-card">
- <div class="channel-header">
- <div class="channel-avatar">IW</div>
- <div class="channel-meta">
- <div class="channel-name">In The World of AI</div>
- </div>
- </div>
- <p class="channel-desc">
- A practical, no-fluff AI channel focused on real workflows, agent systems, and tools you can actually use. Strong emphasis on hands-on demos, emerging AI stacks, and connecting theory to execution.
- </p>
- <div class="tags">
- <span class="tag">AI Agents</span>
- <span class="tag">Automation</span>
- <span class="tag">Developer Tools</span>
- <span class="tag">Practical Demos</span>
- </div>
- <div class="channel-why">
- <div class="channel-why-title">Why I Follow It</div>
- <p class="channel-why-text">This channel consistently explores how AI tools work together — not just what's new. It's especially valuable for builders experimenting with agentic systems and AI-driven development.</p>
- </div>
- <a href="https://youtube.com/@intheworldofai" target="_blank" rel="noopener" class="cta-button">View Channel</a>
- </div>
- </div>
- </section>
+        <main class="bento-grid">
+            <article class="bento-card" style="grid-column: span 6;">
+                <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Chris Sain</h2>
+                <p style="color: var(--color-text-muted); font-size: var(--text-base); margin-bottom: var(--space-6);">
+                    The solid stepping stone for trading education and technical analysis.
+                </p>
+                <a href="https://youtube.com/@chrissain1" class="featured-link" target="_blank">View Channel ↗</a>
+            </article>
 
- <section class="videos-section">
- <h2>Recommended Videos</h2>
- <div class="channels-grid">
- <!-- Video Card -->
- <div class="channel-card">
- <div class="channel-header">
- <div class="channel-avatar" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">C</div>
- <div class="channel-meta">
- <div class="channel-name">ClawdBot Makes Money</div>
- </div>
- </div>
- <p class="channel-desc">
- A breakdown of how ClawdBot generates revenue — a rare look at monetizing AI assistant projects in public. Covers the business model, pricing tiers, and what makes it work.
- </p>
- <div class="tags">
- <span class="tag">AI Business</span>
- <span class="tag">Monetization</span>
- <span class="tag">Open Source</span>
- <span class="tag">SaaS</span>
- </div>
- <div class="channel-why">
- <div class="channel-why-title">Why I Recommend It</div>
- <p class="channel-why-text">Most AI projects don't talk about money. This one does. Useful context for anyone building AI tools and wondering how to sustain the work.</p>
- </div>
- <a href="https://youtu.be/j9eRyAnr4c0" target="_blank" rel="noopener" class="cta-button">Watch Video</a>
- </div>
- </div>
- </section>
+            <article class="bento-card" style="grid-column: span 6;">
+                <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">In The World of AI</h2>
+                <p style="color: var(--color-text-muted); font-size: var(--text-base); margin-bottom: var(--space-6);">
+                    Practical focus on agent systems and no-fluff AI workflows.
+                </p>
+                <a href="https://youtube.com/@intheworldofai" class="featured-link" target="_blank">View Channel ↗</a>
+            </article>
+        </main>
 
- <div class="disclaimer">
- <em>No sponsorships. No affiliate links. Just things I actually learn from.</em>
- </div>
-
- <footer>
- <p class="footer-note">Iterating in public. No selling. Just observing.</p>
- </footer>
- </div>
+        <footer style="text-align: center; margin-top: var(--space-12);">
+            <a href="index.html"
+                style="color: var(--color-text-muted); text-decoration: none; font-size: var(--text-sm);">← Back to
+                HQ</a>
+        </footer>
+    </div>
 </body>
-</html>
 
+</html>

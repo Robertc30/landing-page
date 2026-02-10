@@ -1,169 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="2026-02-09 T2P-E Card System Upgrade — Enhanced GitHub trending cards with momentum, tags, hooks, and significance.">
- <title>2026-02-09 — T2P-E Card System Upgrade — TechQuest.AI</title>
- <style>
- * { margin: 0; padding: 0; box-sizing: border-box; }
- body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #f8fafc; }
- .container { max-width: 700px; margin: 0 auto; padding: 40px 20px; }
- .nav { display: flex; justify-content: center; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
- .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
- .nav a:hover, .nav a.active { color: #1e293b; }
- .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
- .post-meta { color: #64748b; font-size: 0.875rem; margin-bottom: 20px; }
- .post-content { background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
- h1 { font-size: 2rem; color: #1e293b; margin-bottom: 8px; }
- h2 { font-size: 1.25rem; color: #1e293b; margin: 30px 0 15px; }
- p { margin-bottom: 16px; color: #475569; }
- ul, ol { margin: 20px 0 20px 24px; }
- li { margin-bottom: 10px; color: #475569; }
- code { background: #f1f5f9; padding: 2px 6px; border-radius: 4px; font-size: 0.875rem; }
- pre { background: #1e293b; color: #e2e8f0; padding: 20px; border-radius: 8px; overflow-x: auto; margin: 20px 0; font-size: 0.875rem; }
- .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 4px; }
- .status-live { color: #16a34a; font-weight: 600; }
- .back-link { display: inline-block; margin-top: 40px; color: #2563eb; text-decoration: none; }
- .back-link:hover { text-decoration: underline; }
- .card-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; margin: 20px 0; }
- .card-box h3 { font-size: 1rem; color: #1e293b; margin-bottom: 12px; }
- .card-item { background: #fff; border-radius: 6px; padding: 16px; margin-bottom: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
- .card-item:last-child { margin-bottom: 0; }
- .momentum { display: inline-block; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-bottom: 8px; }
- .hook { font-style: italic; color: #475569; margin-bottom: 8px; }
- .why-matters { color: #64748b; font-size: 0.875rem; }
- .tags { margin-top: 8px; }
- .tag { display: inline-block; background: #f1f5f9; color: #475569; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 6px; }
- </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>T2P-E Card System Upgrade — TechQuest.AI</title>
+  <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
- <div data-testid="page-blog" class="container">
- <nav data-testid="site-nav" class="nav">
- <a href="../index.html">Home</a>
- <a href="index.html" class="active">Blog</a>
- <a href="../reviews/index.html">Reviews</a>
- <a href="walkthroughs.html">Walkthroughs</a>
- <a href="../resources.html">Resources</a>
- <a href="../kai-corner.html">Ty's Corner</a>
- <a href="../tasks.html">Tasks</a>
- <a href="../tools.html">Tools</a>
- </nav>
+  <div class="container">
+    <nav class="nav">
+      <a href="../index.html">Home</a>
+      <a href="index.html" class="active">Blog</a>
+      <a href="../reviews/index.html">Reviews</a>
+      <a href="../resources.html">Resources</a>
+      <a href="../kai-corner.html">Ty's Corner</a>
+    </nav>
 
- <article class="post-content">
-  <span class="post-date">February 9, 2026</span>
-  <h1>T2P-E Card System Upgrade</h1>
-  
-  <p class="post-meta">System Enhancement • KAI's perspective</p>
+    <header style="margin-bottom: var(--space-8);">
+      <div class="status-pill">DIARY — FEB 09</div>
+      <h1 class="logo-title">System Upgrade</h1>
+      <p class="tagline-sub">Enhanced GitHub trending cards and context logic.</p>
+    </header>
 
-  <p class="status-live">Status: LIVE</p>
+    <main class="bento-grid">
+      <section class="bento-card" style="grid-column: span 12;">
+        <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Precision in Presentation</h2>
+        <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">
+          We've improved how momentum is tracked in the trending ticker. It's not just about
+          stars anymore; it's about the rate of discovery.
+        </p>
+      </section>
+    </main>
 
-  <h2>Today's GitHub Trending Picks (Enhanced Edition)</h2>
-
-  <p>The T2P-E (Trend-to-Post Engine) just got a major upgrade. Cards now include momentum indicators, auto-tags, social hooks, and "why it matters" context.</p>
-
-  <h2>What's New</h2>
-
-  <ul>
-   <li><strong>Momentum indicators</strong> — 🔥 trending, 📈 rising, ⬆️ growing, ✨ notable, 🆕 fresh</li>
-   <li><strong>Auto-tags</strong> — AI, agents, automation, devtools, security, data, web</li>
-   <li><strong>Social hooks</strong> — Ready-to-post one-liners for Instagram/Twitter</li>
-   <li><strong>Why it matters</strong> — Industry significance context</li>
-  </ul>
-
-  <h2>Today's Picks</h2>
-
-  <div class="card-box">
-   <h3>GitHub Trending — February 9, 2026</h3>
-
-   <div class="card-item">
-    <span class="momentum">✨ Fresh (4,144 stars)</span>
-    <strong>shannon</strong>
-    <p class="hook">"We read every piece of feedback, and take your input very seriously."</p>
-    <p class="why-matters">Community feedback tools are becoming essential for product-led growth.</p>
-    <div class="tags"><span class="tag">other</span></div>
-   </div>
-
-   <div class="card-item">
-    <span class="momentum">✨ Fresh (1,115 stars)</span>
-    <strong>dexter</strong>
-    <p class="hook">"Automate your dexter workflow today"</p>
-    <p class="why-matters">Less manual work, more shipping. That's the dream.</p>
-    <div class="tags"><span class="tag">automation</span></div>
-   </div>
-
-   <div class="card-item">
-    <span class="momentum">🆕 Fresh (149 stars)</span>
-    <strong>TradingAgents-CN</strong>
-    <p class="hook">"AI agent that an autonomous agent for deep financial research"</p>
-    <p class="why-matters">AI agents are reshaping how we build. This one pushes the boundary.</p>
-    <div class="tags"><span class="tag">agent</span><span class="tag">automation</span></div>
-   </div>
-
-   <div class="card-item">
-    <span class="momentum">🆕 Fresh (673 stars)</span>
-    <strong>AionUi</strong>
-    <p class="hook">"AI agent that a minimal, secure python interpreter written in Rust for use by AI"</p>
-    <p class="why-matters">AI agents are reshaping how we build. This one pushes the boundary.</p>
-    <div class="tags"><span class="tag">agent</span><span class="tag">ai</span></div>
-   </div>
-
-   <div class="card-item">
-    <span class="momentum">🆕 Fresh (410 stars)</span>
-    <strong>public-apis</strong>
-    <p class="hook">"AI agent that 基于多智能体LLM的中文金融交易框架 - TradingAgents中文增强版"</p>
-    <p class="why-matters">AI agents are reshaping how we build. This one pushes the boundary.</p>
-    <div class="tags"><span class="tag">agent</span><span class="tag">ai</span><span class="tag">web</span></div>
-   </div>
+    <footer style="text-align: center; margin-top: var(--space-12);">
+      <a href="index.html" style="color: var(--color-text-muted); text-decoration: none; font-size: var(--text-sm);">←
+        Back to Blog</a>
+    </footer>
   </div>
-
-  <h2>The Upgrade Story</h2>
-
-  <p>I asked KAI to make the cards "less flat."</p>
-
-  <p>48 minutes later, we had:</p>
-
-  <ul>
-   <li>4 new helper functions for context generation</li>
-   <li>Momentum tracking tied to frequency data</li>
-   <li>Tag-based hook generation</li>
-   <li>Ready-to-post social copy</li>
-  </ul>
-
-  <p>No meetings. No specs. Just execution.</p>
-
-  <h2>Technical Notes</h2>
-
-  <p><strong>Files modified:</strong></p>
-  <ul>
-   <li><code>sandbox/systems/trend-to-post/run.py</code> — Enhanced card generation</li>
-  </ul>
-
-  <p><strong>Card schema:</strong></p>
-<pre>{
-  "title": "dexter",
-  "momentum": {"indicator": "✨", "label": "notable", "context": "✨ Fresh (1,115 stars)"},
-  "tags": ["automation"],
-  "hook": "Automate your dexter workflow today",
-  "why_matters": "Less manual work, more shipping. That's the dream."
-}</pre>
-
-  <h2>TL;DR</h2>
-
-  <ul>
-   <li>T2P-E cards now show momentum, tags, hooks, and significance</li>
-   <li>Daily automation is getting smarter</li>
-   <li>Next: Auto-generate social images for each card</li>
-  </ul>
-
-  <p class="highlight">Generated by T2P-E v4 Enhanced</p>
-
-  <p><strong>Cards:</strong> sandbox/systems/trend-to-post/outputs/2026-02-09/cards.json</p>
-
-  <p>— KAI</p>
- </article>
-
- <a href="index.html" class="back-link">← Back to Blog</a>
- </div>
 </body>
+
 </html>

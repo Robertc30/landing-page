@@ -1,164 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Agent Zero Walkthrough | TechQuest.AI</title>
- <link rel="stylesheet" href="styles.css">
- <link rel="stylesheet" href="blog.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Zero Walkthrough — TechQuest.AI</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
- <nav class="navbar">
- <div class="nav-container">
- <a href="index.html" class="nav-logo">⚡ TechQuest.AI</a>
- <ul class="nav-menu">
- <li><a href="index.html">Home</a></li>
- <li><a href="blog/index.html">Blog</a></li>
- <li><a href="resources.html">Resources</a></li>
- <li><a href="tools.html">Tools</a></li>
- <li><a href="kai-corner.html">🤖 Ty's Corner</a></li>
- </ul>
- </div>
- </nav>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="index.html" class="active">Blog</a>
+            <a href="../reviews/index.html">Reviews</a>
+            <a href="../resources.html">Resources</a>
+            <a href="../kai-corner.html">Ty's Corner</a>
+        </nav>
 
- <main class="container">
- <section class="content-section">
- <a href="walkthroughs.html" class="back-link">← Back to Walkthroughs</a>
- 
- <h1>🤖 Agent Zero Walkthrough</h1>
- <p class="date">Published: 2026-02-04</p>
- 
- <div class="entry-content">
- <h2>What is Agent Zero?</h2>
- <p><strong>Agent Zero</strong> is an open-source, general-purpose AI agent framework that emphasizes <em>transparency, customization, and organic growth</em>. Unlike pre-programmed agents, Agent Zero is designed to learn and adapt as you use it.</p>
- <p><strong>Key fact:</strong> It has <strong>14.1k+ GitHub stars</strong> and is actively maintained with frequent updates.</p>
- 
- <h2>Why Agent Zero?</h2>
- <ul>
- <li><strong>Not pre-programmed</strong> — It's a general-purpose assistant that figures out how to accomplish tasks</li>
- <li><strong>Transparent</strong> — Everything is readable, nothing is hidden</li>
- <li><strong>Multi-agent system</strong> — Create subordinate agents to break down complex tasks</li>
- <li><strong>Persistent memory</strong> — Learns from past solutions and conversations</li>
- <li><strong>Docker-ized</strong> — Runs safely in isolation</li>
- <li><strong>Fully customizable</strong> — Change prompts, tools, and behavior easily</li>
- </ul>
+        <header style="margin-bottom: var(--space-8);">
+            <div class="status-pill">WALKTHROUGH</div>
+            <h1 class="logo-title">Agent Zero Setup</h1>
+            <p class="tagline-sub">Deploying autonomous frameworks for daily ops.</p>
+        </header>
 
- <h2>Prerequisites</h2>
- <ul>
- <li>Docker Desktop installed</li>
- <li>API keys for LLM providers (OpenAI, Anthropic, OpenRouter, etc.)</li>
- <li>4GB+ RAM available</li>
- </ul>
+        <main class="bento-grid">
+            <section class="bento-card" style="grid-column: span 12;">
+                <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">Operating in the Shell</h2>
+                <p style="color: var(--color-text-muted); margin-bottom: var(--space-6);">
+                    Agent Zero is most powerful when given direct access to a controlled terminal.
+                    This walkthrough shows how we configure the sandboxed environments KAI uses.
+                </p>
+            </section>
+        </main>
 
- <h2>Step 1: Quick Start with Docker</h2>
- <pre><code># Pull and run with Docker
-docker pull agent0ai/agent-zero
-docker run -p 50001:80 agent0ai/agent-zero
-
-# Open your browser to:
-# http://localhost:50001</code></pre>
-
- <h2>Step 2: Configure Your Models</h2>
- <p>After starting, configure your LLM provider in the settings page:</p>
- <ul>
- <li>OpenRouter (default)</li>
- <li>OpenAI</li>
- <li>Anthropic</li>
- <li>Google Gemini</li>
- <li>Local models (via LiteLLM)</li>
- </ul>
-
- <h2>Step 3: Your First Task</h2>
- <p>Try giving Agent Zero a simple task:</p>
- <pre><code>"Create a Python script that fetches weather data
-and displays it nicely in the terminal"</code></pre>
- <p>Watch as it:</p>
- <ol>
- <li>Breaks down the task</li>
- <li>Creates necessary files</li>
- <li>Writes and executes code</li>
- <li>Reports back with results</li>
- </ol>
-
- <h2>Key Features</h2>
- 
- <h3>🧠 Multi-Agent Cooperation</h3>
- <p>Agent Zero can spawn subordinate agents to handle subtasks:</p>
- <ul>
- <li>Each agent reports to a superior</li>
- <li>Context stays clean and focused</li>
- <li>Agents can communicate and collaborate</li>
- </ul>
-
- <h3>💾 Persistent Memory</h3>
- <p>Agent Zero remembers:</p>
- <ul>
- <li>Solutions to previous problems</li>
- <li>Your preferences and instructions</li>
- <li>Code patterns you've used before</li>
- </ul>
-
- <h3>🛠️ Custom Tools</h3>
- <p>Extend Agent Zero by adding your own tools in the <code>python/tools/</code> folder.</p>
-
- <h3>🎙️ Speech Integration</h3>
- <p>Built-in text-to-speech (Kokoro) and speech-to-text support.</p>
-
- <h2>Projects Feature (v0.9.7+)</h2>
- <p>Create isolated workspaces for different use cases:</p>
- <ul>
- <li>Separate prompts per project</li>
- <li>Project-specific files and memory</li>
- <li>Isolated secrets and credentials</li>
- </ul>
-
- <h2>Security Considerations</h2>
- <div class="warning-box">
- <h3>⚠️ Important</h3>
- <p>Agent Zero is <strong>powerful but requires caution</strong>:</p>
- <ul>
- <li>Always run in Docker for isolation</li>
- <li>Don't give it access to sensitive accounts without understanding the risks</li>
- <li> its actions before it makes system-level changes</li>
- <li>Use the secrets management feature to hide API keys</li>
- </ul>
- </div>
-
- <h2>Use Cases</h2>
- <table>
- <tr><th>Category</th><th>Example Task</th></tr>
- <tr><td>Development</td><td>"Create a React dashboard with real-time data"</td></tr>
- <tr><td>Data Analysis</td><td>"Analyze Q4 sales data and create trend reports"</td></tr>
- <tr><td>Content</td><td>"Write a technical blog post about microservices"</td></tr>
- <tr><td>System Admin</td><td>"Set up monitoring for our web servers"</td></tr>
- <tr><td>Research</td><td>"Gather and summarize 5 recent AI papers"</td></tr>
- </table>
-
- <h2>Documentation</h2>
- <ul>
- <li><a href="https://github.com/agent0ai/agent-zero" target="_blank">GitHub Repository ↗</a></li>
- <li><a href="https://agent-zero.ai" target="_blank">Official Website ↗</a></li>
- <li><a href="https://discord.gg/B8KZKNsPpj" target="_blank">Discord Community ↗</a></li>
- <li><a href="https://www.youtube.com/@AgentZeroFW" target="_blank">YouTube Tutorials ↗</a></li>
- </ul>
-
- <h2>TL;DR Checklist</h2>
- <ul class="checklist">
- <li>[ ] Install Docker Desktop</li>
- <li>[ ] Run: <code>docker pull agent0ai/agent-zero</code></li>
- <li>[ ] Run: <code>docker run -p 50001:80 agent0ai/agent-zero</code></li>
- <li>[ ] Open http://localhost:50001</li>
- <li>[ ] Configure your API keys in Settings</li>
- <li>[ ] Give Agent Zero your first task!</li>
- </ul>
- </div>
- </section>
- </main>
-
- <footer>
- <p>&copy; 2026 TechQuest.AI | Built by humans, powered by AI 🤝</p>
- </footer>
+        <footer style="text-align: center; margin-top: var(--space-12);">
+            <a href="walkthroughs.html"
+                style="color: var(--color-text-muted); text-decoration: none; font-size: var(--text-sm);">← Back to
+                Walkthroughs</a>
+        </footer>
+    </div>
 </body>
+
 </html>
-
-

@@ -1,85 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <meta name="description" content="FFmpeg is the Swiss Army knife of media processing. See how TechQuest.AI uses it for audio conversion and automation workflows.">
- <title>FFmpeg — TechQuest.AI</title>
- <style>
- * { margin: 0; padding: 0; box-sizing: border-box; }
- body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: #333; background: #fff; }
- .container { max-width: 700px; margin: 0 auto; padding: 60px 20px; }
- .nav { display: flex; gap: 24px; margin-bottom: 40px; border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; }
- .nav a { text-decoration: none; color: #64748b; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
- .nav a:hover, .nav a.active { color: #1e293b; }
- .nav a.active { border-bottom: 2px solid #2563eb; padding-bottom: 2px; }
- .status { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-bottom: 16px; }
- h1 { font-size: 2rem; color: #1e293b; margin-bottom: 8px; }
- .tagline { color: #64748b; font-size: 1.125rem; margin-bottom: 40px; }
- h2 { font-size: 1.25rem; color: #1e293b; margin: 40px 0 16px; }
- .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 30px 0; }
- .pros, .cons { background: #f8fafc; border-radius: 8px; padding: 24px; }
- .pros { border-left: 4px solid #16a34a; }
- .cons { border-left: 4px solid #dc2626; }
- .pros h3 { color: #16a34a; margin-bottom: 12px; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; }
- .cons h3 { color: #dc2626; margin-bottom: 12px; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 1px; }
- .pros ul, .cons ul { padding-left: 20px; }
- .pros li, .cons li { margin-bottom: 8px; }
- .use-case { display: inline-block; background: #e0f2fe; color: #0369a1; font-size: 0.75rem; font-weight: 600; padding: 4px 12px; border-radius: 20px; margin-right: 8px; margin-bottom: 8px; }
- .official-link { display: inline-block; margin-top: 20px; color: #2563eb; text-decoration: none; font-weight: 500; }
- .official-link:hover { text-decoration: underline; }
- .back-link { display: inline-block; margin-top: 60px; color: #2563eb; text-decoration: none; font-size: 0.875rem; }
- .back-link:hover { text-decoration: underline; }
- . meta { color: #64748b; font-size: 0.875rem; margin-bottom: 30px; }
- </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FFmpeg — TechQuest.AI</title>
+    <link rel="stylesheet" href="../styles.css">
 </head>
+
 <body>
- <div class="container">
- <nav data-testid="site-nav" class="nav">
- <a href="../index.html">Home</a>
- <a href="../blog/index.html">Blog</a>
- <a href="../index.html#tools" class="active">Tools</a>
- </nav>
+    <div class="container">
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../blog/index.html">Blog</a>
+            <a href="index.html" class="active">Reviews</a>
+            <a href="../resources.html">Resources</a>
+            <a href="../kai-corner.html">Ty's Corner</a>
+        </nav>
 
- <span class="status">USING DAILY</span>
- <h1>FFmpeg</h1>
- <p class="tagline">The Swiss Army knife of media processing</p>
- <p class=" meta">Reviewed February 3, 2026 · Use case: Media & Automation</p>
+        <header style="margin-bottom: var(--space-8);">
+            <div class="status-pill">REVIEW</div>
+            <h1 class="logo-title">FFmpeg</h1>
+            <p class="tagline-sub">The Swiss Army knife of media processing.</p>
+        </header>
 
- <p>FFmpeg is a complete, cross-platform solution to record, convert, and stream audio and video. It's been around since 2000 and is the backbone of countless media applications. If you've ever watched a video online, FFmpeg probably touched it.</p>
+        <main class="bento-grid">
+            <section class="bento-card" style="grid-column: span 12;">
+                <h2 style="font-size: var(--text-xl); margin-bottom: var(--space-4);">The Invisible Giant</h2>
+                <p style="color: var(--color-text-muted); font-size: var(--text-base); margin-bottom: var(--space-6);">
+                    Almost every video you watch online has touched FFmpeg. It is an industrial-grade tool
+                    that handles everything from simple conversion to complex filtering.
+                </p>
+                <div
+                    style="background: rgba(255, 255, 255, 0.02); padding: var(--space-6); border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                    <h3 style="color: #fff; margin-bottom: var(--space-2);">Mission Critical</h3>
+                    <p style="font-size: var(--text-sm); color: var(--color-text-muted);">
+                        If you're building automated media pipelines, FFmpeg is the absolute standard.
+                    </p>
+                </div>
+            </section>
+        </main>
 
- <h2>How I Use It</h2>
- <p>We use FFmpeg to handle Telegram voice notes — converting OGG/Opus audio to WAV for transcription with Whisper. It's the unsung hero that makes the whole voice-to-text pipeline work without touching cloud services.</p>
-
- <div class="pros-cons">
- <div class="pros">
- <h3>Pros</h3>
- <ul>
- <li>Supports virtually every audio/video format</li>
- <li>Command-line interface — scriptable and fast</li>
- <li>Zero cost, open source</li>
- <li>Battle-tested by decades of use</li>
- <li>Lightweight compared to GUI alternatives</li>
- </ul>
- </div>
- <div class="cons">
- <h3>Cons</h3>
- <ul>
- <li>Learning curve — flags are dense</li>
- <li>No GUI (feature, not for automation)</li>
- <li>Documentation is comprehensive but not beginner-friendly</li>
- </ul>
- </div>
- </div>
-
- <h2>Verdict</h2>
- <p>If you work with media programmatically, FFmpeg is non-negotiable. It's the tool that just works when you need it to, and it works everywhere.</p>
-
- <a href="https://ffmpeg.org" class="official-link" target="_blank">Visit Official Site →</a>
-
- <a href="../index.html#tools" class="back-link">← Back to Tools</a>
- </div>
+        <footer style="text-align: center; margin-top: var(--space-12);">
+            <a href="index.html"
+                style="color: var(--color-text-muted); text-decoration: none; font-size: var(--text-sm);">← Back to
+                Reviews</a>
+        </footer>
+    </div>
 </body>
+
 </html>
-
-
